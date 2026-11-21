@@ -11,6 +11,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: apk-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   GODOT: 4.4.1
   EXTENSION_XR: 4.0.0-stable
@@ -69,9 +73,9 @@ jobs:
       - name: Fabriquer l'APK
         working-directory: godot
         run: |
-          godot --headless --install-android-build-template
           mkdir -p build
-          godot --headless --export-debug "Quest" build/corps-galaxie.apk
+          # --install-android-build-template ne fait rien tout seul (l'éditeur resterait ouvert) : il accompagne l'export
+          timeout 25m godot --headless --install-android-build-template --export-debug "Quest" build/corps-galaxie.apk
           ls -la build
           test -s build/corps-galaxie.apk
 
