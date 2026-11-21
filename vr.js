@@ -25,7 +25,7 @@ const smooth = (a, b, x) => { const t = Math.max(0, Math.min(1, (x - a) / (b - a
 
 /* ───────── état : pile de niveaux + placement du niveau courant dans la pièce ───────── */
 // Un point local x du niveau courant se trouve dans la pièce à : W.p + W.s * W.A * x   (mètres)
-let path = [{ n: CORPS }];
+let path = [{ n: CORPS }], DT = 0.016;
 const W = { p: [0, 1.15, -0.95], A: I3(), s: 0.55 };
 const cur = () => path[path.length - 1].n;
 const kids = n => { if (!n.kid) { const a = []; for (let i = 0; i < n.n; i++) if (n.K[i] !== 255) a.push(i); n.kid = Int32Array.from(a); } return n.kid; };
@@ -35,15 +35,15 @@ function pop() { const e = path.pop(); W.s /= e.r; W.A = mul3(W.A, tr3(e.R)); W.
 // On « entre » dans un enfant quand il fait plus d'un mètre de large autour du point qu'on manipule ; on en ressort quand il redevient petit.
 function relink(focus) { let changed = false, popped = false;
   for (let it = 0; it < 8; it++) { const n = cur();
-    if (path.length > 1 && (W.s < 0.1 || dist(focus, W.p) > 1.5 * W.s + 0.3)) { pop(); changed = popped = true; continue; }
+    if (path.length > 1 && (W.s < 0.06 || dist(focus, W.p) > 1.5 * W.s + 0.3)) { pop(); changed = popped = true; continue; }
     const f = mulS(tmv3(W.A, sub(focus, W.p)), 1 / W.s), kid = kids(n), P = n.P; let best = -1, bR = 0;
-    let near = -1, nE = 0.6;   // dans le vide : l'enfant assez gros le plus proche est attiré vers le point qu'on manipule
-    for (let k = 0; k < kid.length; k++) { const i = kid[k], r = n.kinds[n.K[i]].r; if (r * W.s < 0.3) continue;
+    let near = -1, nE = W.s >= (n.maxR ? 0.5 / n.minR : 5) * 0.98 ? 1e9 : Math.max(0.5 / W.s, 0.3);   // arrivé en butée : on prend le plus proche, où qu'il soit   // dans le vide : l'enfant assez gros le plus proche est attiré vers le point qu'on manipule
+    for (let k = 0; k < kid.length; k++) { const i = kid[k], r = n.kinds[n.K[i]].r; if (r * W.s < 0.15) continue;
       const j = 3 * i, dx = P[j] - f[0], dy = P[j + 1] - f[1], dz = P[j + 2] - f[2], d = Math.sqrt(dx * dx + dy * dy + dz * dz);
       if (d < r * 0.9 && r > bR) { best = i; bR = r; } else if (d - r < nE) { near = i; nE = d - r; } }
-    if (best < 0 && near >= 0 && !popped) { const j = 3 * near, c = add(W.p, mulS(mv3(W.A, [P[j], P[j + 1], P[j + 2]]), W.s)); W.p = add(W.p, mulS(sub(focus, c), 0.08)); changed = true; break; }
+    if (best < 0 && near >= 0 && !popped) { const j = 3 * near, c = add(W.p, mulS(mv3(W.A, [P[j], P[j + 1], P[j + 2]]), W.s)); W.p = add(W.p, mulS(sub(focus, c), 1 - Math.exp(-DT * 6))); changed = true; break; }
     if (best >= 0) { push(best); changed = true; continue; } break; }
-  const n = cur(), max = path.length === 1 ? 400 : n.maxR ? 0.6 / n.minR : 5;
+  const n = cur(), max = n.maxR ? 0.5 / n.minR : 5;
   // butées d'échelle : on recale aussi la position, pour que le point manipulé reste en place quand on bute
   const lim = Math.max(path.length === 1 ? 0.05 : 0.01, Math.min(max, W.s)); if (lim !== W.s) { W.p = add(focus, mulS(sub(W.p, focus), lim / W.s)); W.s = lim; changed = true; }
   return changed; }
@@ -61,8 +61,8 @@ const PTS = prog(`#version 300 es
 in vec3 aPos; in vec3 aCol; in float aSize;
 uniform mat4 uPV, uModel; uniform float uS, uF, uGain, uOpen; out vec3 vCol;
 void main(){ vec4 w = uModel * vec4(aPos, 1.0); float d = max(length(w.xyz), 0.02); gl_Position = uPV * w; float a = uGain, px;
-  if (aSize > 0.0) { float pr = aSize * uS / d * uF; a *= 0.9 * (1.0 - smoothstep(uOpen * 0.5, uOpen, pr)); px = clamp(2.0 * pr, 3.0, 2.0 * uOpen); }
-  else { float pr = 0.0035 * uS / d * uF; px = clamp(2.0 * pr, 2.2, 6.0); a *= 0.6; }
+  if (aSize > 0.0) { float pr = aSize * uS / d * uF; a *= 0.75 * mix(1.0, 0.3, smoothstep(uOpen * 0.5, uOpen, pr)); px = clamp(2.0 * pr, 3.0, 1.6 * uOpen); }
+  else { float pr = 0.0035 * uS / d * uF; px = clamp(2.0 * pr, 2.2, 5.0); a *= 0.5; }
   a *= smoothstep(0.03, 0.12, d); gl_PointSize = px; vCol = aCol * a; }`,
 `#version 300 es
 precision mediump float; in vec3 vCol; out vec4 o;
@@ -88,11 +88,11 @@ const handData = new Float32Array(120 * 7), handGpu = makeVao(handData, gl.DYNAM
 const quad = makeVao(new Float32Array([-1, -1, 0, 0, 0, 0, 0, 1, -1, 0, 0, 0, 0, 0, -1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0]), gl.STATIC_DRAW);
 
 /* ───────── choix de ce qu'on dessine cette image ───────── */
-const OPEN = 12, DENS = 0.14, MAX_ITEMS = 420, MAX_POINTS = 340000;
+const OPEN = 12, DENS = 0.14, MAX_ITEMS = 600, MAX_POINTS = 340000;
 let items = [], total = 0, head = [0, 1.5, 0], fwd = [0, 0, -1], F = 900;
 function collect(n, t, A, s, depth, gain) { const d = Math.max(0.03, dist(t, head)), px = s / d * F;
   let cnt = n.n; const want = n.ns + px * px * DENS; if (want < n.n) cnt = Math.max(1, want | 0);
-  items.push({ n, t, A, s, cnt, gain }); total += cnt;
+  items.push({ n, t, A, s, cnt, gain: gain * Math.min(1, Math.sqrt(0.012 * (3.14 * px * px + 1) / cnt)) }); total += cnt;
   if (!n.maxR || depth >= 7 || n.maxR * s / Math.max(0.05, d - s) * F < OPEN * 0.5) return;
   const kid = kids(n), P = n.P, cand = [];
   for (let k = 0; k < kid.length; k++) { const i = kid[k], j = 3 * i, r = n.kinds[n.K[i]].r * s, x = P[j], y = P[j + 1], z = P[j + 2];
@@ -111,32 +111,30 @@ function buildList() { items = []; total = 0; let t = W.p, A = W.A, s = W.s, top
     m[12] = it.t[0] - head[0]; m[13] = it.t[1] - head[1]; m[14] = it.t[2] - head[2]; m[15] = 1; } }
 
 /* ───────── panneau d'explication (texte dessiné dans une image, affichée sur un rectangle flottant) ───────── */
-const pc = document.createElement('canvas'); pc.width = 1024; pc.height = 600; const px2 = pc.getContext('2d');
-const ptex = gl.createTexture(); let panelKey = '', fps = 0, panel = null, pressed = '', wantExit = false, wantHome = false;
-const BTN = [{ id: 'home', label: 'Revenir au corps', x: 30, w: 470 }, { id: 'exit', label: 'Quitter la VR', x: 524, w: 470 }], BY = 444, BH = 136;
-function wrap(txt, maxW) { const out = []; let line = ''; for (const w of txt.split(' ')) { const t = line ? line + ' ' + w : w; if (px2.measureText(t).width > maxW && line) { out.push(line); line = w; } else line = t; } if (line) out.push(line); return out; }
-function drawPanel(n) { const key = n.name + '|' + path.length + '|' + Math.round(fps / 3) + '|' + pressed;
-  if (key === panelKey) return; panelKey = key; const c = px2; c.clearRect(0, 0, 1024, 600);
-  c.fillStyle = 'rgba(6,6,8,.86)'; c.fillRect(0, 0, 1024, 600); c.fillStyle = n.hex; c.fillRect(0, 0, 8, 430);
+// Deux panneaux distincts : l'explication au-dessus du poignet gauche, le menu (revenir, quitter) au-dessus du poignet droit.
+let fps = 0, pressed = '', wantExit = false, wantHome = false;
+const mkPanel = (w, h, pw, ph) => { const cv = document.createElement('canvas'); cv.width = w; cv.height = h; return { cv, c: cv.getContext('2d'), tex: gl.createTexture(), key: '', pw, ph, geo: null, m: null }; };
+const INFO = mkPanel(1024, 448, 0.15, 0.0656), MENU = mkPanel(1024, 260, 0.13, 0.033);
+const BTN = [{ id: 'home', label: 'Revenir au corps', x: 24, w: 476 }, { id: 'exit', label: 'Quitter la VR', x: 524, w: 476 }], BY = 24, BH = 212;
+function upload(p) { gl.bindTexture(gl.TEXTURE_2D, p.tex); gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, true); gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, p.cv); gl.generateMipmap(gl.TEXTURE_2D);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE); }
+function wrap(c, txt, maxW) { const out = []; let line = ''; for (const w of txt.split(' ')) { const t = line ? line + ' ' + w : w; if (c.measureText(t).width > maxW && line) { out.push(line); line = w; } else line = t; } if (line) out.push(line); return out; }
+function drawInfo(n) { const key = n.name + '|' + path.length + '|' + Math.round(fps / 3); if (key === INFO.key) return; INFO.key = key; const c = INFO.c; c.clearRect(0, 0, 1024, 448);
+  c.fillStyle = 'rgba(6,6,8,.86)'; c.fillRect(0, 0, 1024, 448); c.fillStyle = n.hex; c.fillRect(0, 0, 8, 448);
   c.fillStyle = '#8f8f94'; c.font = '500 24px system-ui,sans-serif'; c.fillText(path.map(e => e.n.name).join('  ›  ').slice(-70), 36, 46);
   c.fillStyle = '#f1f1ec'; c.font = '600 56px system-ui,sans-serif'; c.fillText(n.name, 36, 114);
   c.fillStyle = n.hex; c.font = '500 24px system-ui,sans-serif'; c.fillText(n.cat.toUpperCase(), 36, 152);
-  c.fillStyle = '#f1f1ec'; c.font = '400 29px system-ui,sans-serif'; wrap(n.desc, 950).slice(0, 6).forEach((l, i) => c.fillText(l, 36, 200 + i * 38));
-  c.fillStyle = '#8f8f94'; c.font = '400 19px ui-monospace,monospace'; c.textAlign = 'right'; c.fillText(Math.round(fps) + ' images/s · ' + total + ' points', 1000, 426);
-  c.textAlign = 'center'; c.font = '600 38px system-ui,sans-serif';
-  for (const b of BTN) { const on = pressed === b.id; c.fillStyle = on ? '#f1f1ec' : 'rgba(40,40,46,.95)'; c.fillRect(b.x, BY, b.w, BH); c.strokeStyle = '#f1f1ec'; c.lineWidth = 3; c.strokeRect(b.x, BY, b.w, BH); c.fillStyle = on ? '#000' : '#f1f1ec'; c.fillText(b.label, b.x + b.w / 2, BY + BH / 2 + 13); }
-  c.textAlign = 'left';
-  gl.bindTexture(gl.TEXTURE_2D, ptex); gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, true); gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, pc); gl.generateMipmap(gl.TEXTURE_2D);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE); }
-// Le panneau n'est plus devant le visage : il flotte au-dessus du poignet gauche, tourné vers toi. Tu le regardes quand tu veux,
-// et tu touches ses boutons avec l'index de l'autre main.
-const PW = 0.15, PH = 0.088;
-function placePanel() { const lh = hands.find(h => h.id === 'left' && h.wrist) || hands.find(h => h.wrist && h.id !== 'right'); if (!lh) { panel = null; return null; }
-  const c = [lh.wrist[0], lh.wrist[1] + 0.15, lh.wrist[2]], nrm = norm(sub(head, c)), r = norm(cross([0, 1, 0], nrm)), u = cross(nrm, r), m = new Float32Array(16);
-  m[0] = r[0] * PW; m[1] = r[1] * PW; m[2] = r[2] * PW; m[4] = u[0] * PH; m[5] = u[1] * PH; m[6] = u[2] * PH; m[8] = nrm[0]; m[9] = nrm[1]; m[10] = nrm[2];
-  m[12] = c[0] - head[0]; m[13] = c[1] - head[1]; m[14] = c[2] - head[2]; m[15] = 1; panel = { c, r, u, nrm, hand: lh.id }; return m; }
-function panelTouch() { let hit = ''; if (panel) for (const h of hands) { if (h.id === panel.hand || !h.tip) continue; const d = sub(h.tip, panel.c), z = dot(d, panel.nrm); if (Math.abs(z) > 0.025) continue;
-      const x = (dot(d, panel.r) / PW + 1) * 512, y = (1 - dot(d, panel.u) / PH) * 300; for (const b of BTN) if (x > b.x && x < b.x + b.w && y > BY && y < BY + BH) hit = b.id; }
+  c.fillStyle = '#f1f1ec'; c.font = '400 29px system-ui,sans-serif'; wrap(c, n.desc, 950).slice(0, 6).forEach((l, i) => c.fillText(l, 36, 200 + i * 38));
+  c.fillStyle = '#8f8f94'; c.font = '400 19px ui-monospace,monospace'; c.textAlign = 'right'; c.fillText(Math.round(fps) + ' images/s · ' + total + ' points', 1000, 434); c.textAlign = 'left'; upload(INFO); }
+function drawMenu() { if (MENU.key === 'm' + pressed) return; MENU.key = 'm' + pressed; const c = MENU.c; c.clearRect(0, 0, 1024, 260); c.textAlign = 'center'; c.font = '600 44px system-ui,sans-serif';
+  for (const b of BTN) { const on = pressed === b.id; c.fillStyle = on ? '#f1f1ec' : 'rgba(20,20,24,.92)'; c.fillRect(b.x, BY, b.w, BH); c.strokeStyle = '#f1f1ec'; c.lineWidth = 4; c.strokeRect(b.x, BY, b.w, BH); c.fillStyle = on ? '#000' : '#f1f1ec'; c.fillText(b.label, b.x + b.w / 2, BY + BH / 2 + 15); }
+  upload(MENU); }
+function place(p, id) { const h = hands.find(x => x.id === id && x.wrist); if (!h) { p.geo = p.m = null; return; }
+  const c = [h.wrist[0], h.wrist[1] + p.ph + 0.07, h.wrist[2]], nrm = norm(sub(head, c)), r = norm(cross([0, 1, 0], nrm)), u = cross(nrm, r), m = new Float32Array(16);
+  m[0] = r[0] * p.pw; m[1] = r[1] * p.pw; m[2] = r[2] * p.pw; m[4] = u[0] * p.ph; m[5] = u[1] * p.ph; m[6] = u[2] * p.ph; m[8] = nrm[0]; m[9] = nrm[1]; m[10] = nrm[2];
+  m[12] = c[0] - head[0]; m[13] = c[1] - head[1]; m[14] = c[2] - head[2]; m[15] = 1; p.m = m; p.geo = { c, r, u, nrm, hand: id }; }
+function menuTouch() { let hit = ''; const g = MENU.geo; if (g) for (const h of hands) { if (h.id === g.hand || !h.tip) continue; const d = sub(h.tip, g.c), z = dot(d, g.nrm); if (Math.abs(z) > 0.025) continue;
+      const x = (dot(d, g.r) / MENU.pw + 1) * 512, y = (1 - dot(d, g.u) / MENU.ph) * 130; for (const b of BTN) if (x > b.x && x < b.x + b.w && y > BY && y < BY + BH) hit = b.id; }
   if (hit && hit !== pressed) { if (hit === 'exit') wantExit = true; else wantHome = true; } pressed = hit; }
 
 /* ───────── gestes ───────── */
@@ -175,8 +173,8 @@ function drawEye(proj, view, vpH, panelM) { // on dessine par rapport à la têt
   gl.enable(gl.BLEND); gl.blendFunc(gl.ONE, gl.ONE); gl.disable(gl.DEPTH_TEST);
   for (const it of items) { gl.bindVertexArray(gpu(it.n)); gl.uniformMatrix4fv(U.uModel, false, it.m); gl.uniform1f(U.uS, it.s); gl.uniform1f(U.uGain, it.gain * Math.min(1.5, Math.sqrt(it.n.n / it.cnt))); gl.drawArrays(gl.POINTS, 0, it.cnt); }
   if (handCount) { gl.bindVertexArray(handGpu.vao); gl.uniformMatrix4fv(U.uModel, false, IDENT); gl.uniform1f(U.uS, 1); gl.uniform1f(U.uGain, 1); gl.uniform1f(U.uOpen, 1e5); gl.drawArrays(gl.POINTS, 0, handCount); }
-  if (panelM) { gl.useProgram(PAN); gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA); gl.uniformMatrix4fv(UP.uPV, false, pv); gl.uniformMatrix4fv(UP.uModel, false, panelM);
-    gl.bindTexture(gl.TEXTURE_2D, ptex); gl.bindVertexArray(quad.vao); gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4); }
+  if (panelM) for (const p of [INFO, MENU]) { if (!p.m) continue; gl.useProgram(PAN); gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA); gl.uniformMatrix4fv(UP.uPV, false, pv); gl.uniformMatrix4fv(UP.uModel, false, p.m);
+    gl.bindTexture(gl.TEXTURE_2D, p.tex); gl.bindVertexArray(quad.vao); gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4); }
   gl.bindVertexArray(null); }
 const IDENT = new Float32Array([1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]);
 let lastT = 0; const tick = t => { const dt = Math.min(0.1, (t - lastT) / 1000 || 0.016); lastT = t; fps += (1 / dt - fps) * 0.05; return dt; };
@@ -192,8 +190,8 @@ async function enter(mode) { const etat = document.getElementById('etat');
     const loop = (t, frame) => { session.requestAnimationFrame(loop); const pose = frame.getViewerPose(ref); if (!pose) return; const dt = tick(t);
       const hp = pose.transform.position, hm = pose.transform.matrix; head = [hp.x, hp.y, hp.z]; fwd = norm([-hm[8], -hm[9], -hm[10]]);
       if (!placed || wantHome) { placed = true; wantHome = false; grabKey = null; const f = norm([fwd[0], 0, fwd[2]]); path = [{ n: CORPS }]; W.s = 0.5; W.A = qMat([0, Math.sin(Math.atan2(-f[0], -f[2]) / 2), 0, Math.cos(Math.atan2(-f[0], -f[2]) / 2)]); W.p = [head[0] + f[0] * 0.9, Math.max(0.9, head[1] - 0.35), head[2] + f[2] * 0.9]; }
-      readXR(frame, ref, session, dt); gestures(); panelTouch(); if (wantExit) { wantExit = false; session.end(); return; }
-      const v0 = layer.getViewport(pose.views[0]); F = pose.views[0].projectionMatrix[5] * v0.height / 2; buildList(); drawPanel(pointed()); const pm = placePanel();
+      DT = dt; readXR(frame, ref, session, dt); gestures(); place(INFO, 'left'); place(MENU, 'right'); menuTouch(); if (wantExit) { wantExit = false; session.end(); return; }
+      const v0 = layer.getViewport(pose.views[0]); F = pose.views[0].projectionMatrix[5] * v0.height / 2; buildList(); drawInfo(pointed()); drawMenu(); const pm = true;
       gl.bindFramebuffer(gl.FRAMEBUFFER, layer.framebuffer); gl.clearColor(0, 0, 0, mode === 'immersive-ar' ? 0 : 1); gl.clear(gl.COLOR_BUFFER_BIT);
       for (const view of pose.views) { const vp = layer.getViewport(view); gl.viewport(vp.x, vp.y, vp.width, vp.height); drawEye(view.projectionMatrix, view.transform.inverse.matrix, vp.height, pm); } };
     session.requestAnimationFrame(loop); etat.textContent = 'En immersion.';
@@ -201,7 +199,8 @@ async function enter(mode) { const etat = document.getElementById('etat');
 
 /* ───────── aperçu à plat (ordinateur, ou avant d'entrer en VR) : glisser pour tourner, molette pour zoomer ───────── */
 const FOCUS = [0, 1.15, -0.95];
-function flat(t) { if (xr) return; requestAnimationFrame(flat); tick(t);
+let flatUntil = 0;
+function flat(t) { if (xr) return; requestAnimationFrame(flat); DT = tick(t); if (t < flatUntil) relink(FOCUS);
   const w = canvas.clientWidth, h = canvas.clientHeight, d = Math.min(devicePixelRatio || 1, 2); if (canvas.width !== Math.round(w * d) || canvas.height !== Math.round(h * d)) { canvas.width = Math.round(w * d); canvas.height = Math.round(h * d); }
   head = [0, 1.25, 0.25]; fwd = [0, 0, -1]; const f = 1 / Math.tan(0.5), a = canvas.width / canvas.height, n = 0.02, fa = 500;
   const proj = new Float32Array([f / a, 0, 0, 0, 0, f, 0, 0, 0, 0, (fa + n) / (n - fa), -1, 0, 0, 2 * fa * n / (n - fa), 0]), view = new Float32Array([1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -head[0], -head[1], -head[2], 1]);
@@ -212,7 +211,7 @@ canvas.addEventListener('pointerdown', e => { dragging = [e.clientX, e.clientY];
 canvas.addEventListener('pointermove', e => { if (!dragging || xr) return; const dx = (e.clientX - dragging[0]) * 0.006, dy = (e.clientY - dragging[1]) * 0.006; dragging = [e.clientX, e.clientY];
   const D = mul3(qMat([0, Math.sin(dx / 2), 0, Math.cos(dx / 2)]), qMat([Math.sin(dy / 2), 0, 0, Math.cos(dy / 2)])); W.A = mul3(D, W.A); W.p = add(FOCUS, mv3(D, sub(W.p, FOCUS))); });
 canvas.addEventListener('pointerup', () => { dragging = null; });
-canvas.addEventListener('wheel', e => { e.preventDefault(); if (xr) return; const k = Math.exp(-e.deltaY * 0.0015); W.s *= k; W.p = add(FOCUS, mulS(sub(W.p, FOCUS), k)); relink(FOCUS); }, { passive: false });
+canvas.addEventListener('wheel', e => { e.preventDefault(); if (xr) return; const k = Math.exp(-e.deltaY * 0.0015); W.s *= k; W.p = add(FOCUS, mulS(sub(W.p, FOCUS), k)); relink(FOCUS); flatUntil = performance.now() + 1200; }, { passive: false });
 
 /* ───────── boutons ───────── */
 (async () => { const etat = document.getElementById('etat'), bv = document.getElementById('vr'), ba = document.getElementById('ar');
