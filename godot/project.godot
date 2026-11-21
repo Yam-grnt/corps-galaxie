@@ -1,0 +1,27 @@
+; Le corps galaxie — projet Godot 4.4 pour Meta Quest 3.
+config_version=5
+
+[application]
+
+config/name="Le corps galaxie"
+config/description="Un corps humain fait de points, à explorer de l'organisme jusqu'aux atomes."
+run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.4", "GL Compatibility")
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=800
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+
+[xr]
+
+openxr/enabled=true
+openxr/extensions/hand_tracking=true
+shaders/enabled=true

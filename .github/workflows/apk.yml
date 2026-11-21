@@ -1,0 +1,90 @@
+# Fabrique l'APK du corps galaxie pour Meta Quest à chaque modification du projet Godot.
+# L'APK est ensuite disponible dans la publication « APK de test » du dépôt, prêt à être installé avec SideQuest.
+name: Fabriquer l'APK Quest
+
+on:
+  push:
+    branches: [main, claude/prototype-vr]
+    paths: ['godot/**', '.github/workflows/apk.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  GODOT: 4.4.1
+  EXTENSION_XR: 4.0.0-stable
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Installer Godot et ses modèles d'export Android
+        run: |
+          curl -fsSL -o godot.zip "https://github.com/godotengine/godot/releases/download/${GODOT}-stable/Godot_v${GODOT}-stable_linux.x86_64.zip"
+          unzip -q godot.zip
+          sudo mv "Godot_v${GODOT}-stable_linux.x86_64" /usr/local/bin/godot
+          curl -fsSL -o modeles.tpz "https://github.com/godotengine/godot/releases/download/${GODOT}-stable/Godot_v${GODOT}-stable_export_templates.tpz"
+          mkdir -p "$HOME/.local/share/godot/export_templates/${GODOT}.stable"
+          unzip -q -j modeles.tpz 'templates/android*' 'templates/version.txt' -d "$HOME/.local/share/godot/export_templates/${GODOT}.stable"
+          ls -la "$HOME/.local/share/godot/export_templates/${GODOT}.stable"
+
+      - name: Ajouter l'extension OpenXR pour Meta Quest
+        run: |
+          curl -fsSL -o extension.zip "https://github.com/GodotVR/godot_openxr_vendors/releases/download/${EXTENSION_XR}/godotopenxrvendorsaddon.zip"
+          unzip -q extension.zip -d extension
+          mkdir -p godot/addons
+          cp -r extension/asset/addons/godotopenxrvendors godot/addons/
+
+      - name: Réglages de l'éditeur (SDK Android, Java, clé de test)
+        run: |
+          mkdir -p "$HOME/.config/godot"
+          cat > "$HOME/.config/godot/editor_settings-4.4.tres" <<REGLAGES
+          [gd_resource type="EditorSettings" format=3]
+
+          [resource]
+          export/android/java_sdk_path = "$JAVA_HOME"
+          export/android/android_sdk_path = "$ANDROID_HOME"
+          export/android/debug_keystore = "$GITHUB_WORKSPACE/godot/essai.keystore"
+          export/android/debug_keystore_user = "androiddebugkey"
+          export/android/debug_keystore_pass = "android"
+          REGLAGES
+          sed -i 's/^          //' "$HOME/.config/godot/editor_settings-4.4.tres"
+          cat "$HOME/.config/godot/editor_settings-4.4.tres"
+
+      - name: Essai automatique du zoom (sans casque)
+        working-directory: godot
+        run: |
+          godot --headless --import || true
+          godot --headless -- --essai
+
+      - name: Fabriquer l'APK
+        working-directory: godot
+        run: |
+          godot --headless --install-android-build-template
+          mkdir -p build
+          godot --headless --export-debug "Quest" build/corps-galaxie.apk
+          ls -la build
+          test -s build/corps-galaxie.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: corps-galaxie-apk
+          path: godot/build/corps-galaxie.apk
+
+      - name: Publier l'APK de test
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: apk-test
+          name: APK de test
+          body: "Dernier APK fabriqué automatiquement. Télécharge corps-galaxie.apk et installe-le sur le Quest avec SideQuest ou Meta Quest Developer Hub."
+          prerelease: true
+          files: godot/build/corps-galaxie.apk
