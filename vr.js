@@ -114,7 +114,7 @@ function buildList() { items = []; total = 0; let t = W.p, A = W.A, s = W.s, top
 // Deux panneaux distincts : l'explication au-dessus du poignet gauche, le menu (revenir, quitter) au-dessus du poignet droit.
 let fps = 0, pressed = '', wantExit = false, wantHome = false;
 const mkPanel = (w, h, pw, ph) => { const cv = document.createElement('canvas'); cv.width = w; cv.height = h; return { cv, c: cv.getContext('2d'), tex: gl.createTexture(), key: '', pw, ph, geo: null, m: null }; };
-const INFO = mkPanel(1024, 448, 0.15, 0.0656), MENU = mkPanel(1024, 260, 0.13, 0.033);
+const INFO = mkPanel(1024, 448, 0.21, 0.092), MENU = mkPanel(1024, 260, 0.17, 0.043);
 const BTN = [{ id: 'home', label: 'Revenir au corps', x: 24, w: 476 }, { id: 'exit', label: 'Quitter la VR', x: 524, w: 476 }], BY = 24, BH = 212;
 function upload(p) { gl.bindTexture(gl.TEXTURE_2D, p.tex); gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, true); gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, p.cv); gl.generateMipmap(gl.TEXTURE_2D);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE); }
@@ -129,25 +129,31 @@ function drawInfo(n) { const key = n.name + '|' + path.length + '|' + Math.round
 function drawMenu() { if (MENU.key === 'm' + pressed) return; MENU.key = 'm' + pressed; const c = MENU.c; c.clearRect(0, 0, 1024, 260); c.textAlign = 'center'; c.font = '600 44px system-ui,sans-serif';
   for (const b of BTN) { const on = pressed === b.id; c.fillStyle = on ? '#f1f1ec' : 'rgba(20,20,24,.92)'; c.fillRect(b.x, BY, b.w, BH); c.strokeStyle = '#f1f1ec'; c.lineWidth = 4; c.strokeRect(b.x, BY, b.w, BH); c.fillStyle = on ? '#000' : '#f1f1ec'; c.fillText(b.label, b.x + b.w / 2, BY + BH / 2 + 15); }
   upload(MENU); }
-function place(p, id) { const h = hands.find(x => x.id === id && x.wrist); if (!h) { p.geo = p.m = null; return; }
-  const c = [h.wrist[0], h.wrist[1] + p.ph + 0.07, h.wrist[2]], nrm = norm(sub(head, c)), r = norm(cross([0, 1, 0], nrm)), u = cross(nrm, r), m = new Float32Array(16);
-  m[0] = r[0] * p.pw; m[1] = r[1] * p.pw; m[2] = r[2] * p.pw; m[4] = u[0] * p.ph; m[5] = u[1] * p.ph; m[6] = u[2] * p.ph; m[8] = nrm[0]; m[9] = nrm[1]; m[10] = nrm[2];
-  m[12] = c[0] - head[0]; m[13] = c[1] - head[1]; m[14] = c[2] - head[2]; m[15] = 1; p.m = m; p.geo = { c, r, u, nrm, hand: id }; }
-function menuTouch() { let hit = ''; const g = MENU.geo; if (g) for (const h of hands) { if (h.id === g.hand || !h.tip) continue; const d = sub(h.tip, g.c), z = dot(d, g.nrm); if (Math.abs(z) > 0.025) continue;
+// Les panneaux ne suivent plus les mains : ils sont posés dans la pièce, de part et d'autre du corps, tournés vers l'endroit
+// où tu te tenais en entrant. « Revenir au corps » les replace devant toi.
+function anchor(p, h0, f, ang, dy, d) { const c0 = Math.cos(ang), s0 = Math.sin(ang), dir = [f[0] * c0 - f[2] * s0, 0, f[0] * s0 + f[2] * c0], c = [h0[0] + dir[0] * d, h0[1] + dy, h0[2] + dir[2] * d];
+  const nrm = norm(sub(h0, c)), r = norm(cross([0, 1, 0], nrm)), u = cross(nrm, r); p.geo = { c, r, u, nrm }; }
+function place(p) { const g = p.geo; if (!g) { p.m = null; return; } const m = p.m = new Float32Array(16);
+  m[0] = g.r[0] * p.pw; m[1] = g.r[1] * p.pw; m[2] = g.r[2] * p.pw; m[4] = g.u[0] * p.ph; m[5] = g.u[1] * p.ph; m[6] = g.u[2] * p.ph; m[8] = g.nrm[0]; m[9] = g.nrm[1]; m[10] = g.nrm[2];
+  m[12] = g.c[0] - head[0]; m[13] = g.c[1] - head[1]; m[14] = g.c[2] - head[2]; m[15] = 1; }
+let POKE = null;   // doigt simulé, pour les tests automatiques
+function menuTouch() { let hit = ''; const g = MENU.geo; if (g) for (const h of POKE ? [{ tip: POKE }] : hands) { if (!h.tip) continue; const d = sub(h.tip, g.c), z = dot(d, g.nrm); if (Math.abs(z) > 0.03) continue;
       const x = (dot(d, g.r) / MENU.pw + 1) * 512, y = (1 - dot(d, g.u) / MENU.ph) * 130; for (const b of BTN) if (x > b.x && x < b.x + b.w && y > BY && y < BY + BH) hit = b.id; }
   if (hit && hit !== pressed) { if (hit === 'exit') wantExit = true; else wantHome = true; } pressed = hit; }
 
 /* ───────── gestes ───────── */
-let hands = [], grabKey = null, cap = null, pinchState = {};
+let hands = [], grabKey = null, pinchState = {};
+// Chaque image applique le petit mouvement des mains depuis l'image précédente, directement sur le monde.
+// (L'ancienne version repartait d'une position mémorisée au début du geste, et la remémorisait dès qu'on entrait
+// dans quelque chose ou qu'une chose était attirée : le zoom se figeait à chaque fois.)
+let prev = null;
 function gestures() { const g = hands.filter(h => h.pinch), key = g.map(h => h.id).join('+');
-  if (key !== grabKey) { grabKey = key; cap = { p: W.p.slice(), A: new Float64Array(W.A), s: W.s, a: g[0] && g[0].pos.slice(), q: g[0] && g[0].quat.slice(), b: g[1] && g[1].pos.slice() }; }
-  if (g.length === 1) { // une main : on tient l'objet, il suit la main et tourne avec le poignet
-    const D = qMat(qMul(g[0].quat, qConj(cap.q))); W.A = mul3(D, cap.A); W.p = add(g[0].pos, mv3(D, sub(cap.p, cap.a)));
-    if (relink(g[0].pos)) grabKey = null; }
-  else if (g.length === 2) { // deux mains : écarter pour grossir, tourner les mains pour faire pivoter, autour du point entre les mains
-    const a = g[0].pos, b = g[1].pos, m = mulS(add(a, b), 0.5), m0 = mulS(add(cap.a, cap.b), 0.5), k = Math.pow(Math.max(0.02, dist(a, b)) / Math.max(0.02, dist(cap.a, cap.b)), 2.2);   // écarter les mains du double agrandit d'environ 4,6 fois
-    const D = qMat(qFromTo(norm(sub(cap.b, cap.a)), norm(sub(b, a)))); W.A = mul3(D, cap.A); W.s = cap.s * k; W.p = add(m, mulS(mv3(D, sub(cap.p, m0)), k));
-    if (relink(m)) grabKey = null; } }
+  if (prev && prev.key === key && g.length === 1) { // une main : l'objet suit la main et tourne avec le poignet
+    const D = qMat(qMul(g[0].quat, qConj(prev.q))); W.A = mul3(D, W.A); W.p = add(g[0].pos, mv3(D, sub(W.p, prev.a))); relink(g[0].pos); }
+  else if (prev && prev.key === key && g.length === 2) { // deux mains : écarter pour grossir, tourner pour faire pivoter, autour du point entre les mains
+    const a = g[0].pos, b = g[1].pos, m = mulS(add(a, b), 0.5), m0 = mulS(add(prev.a, prev.b), 0.5), k = Math.pow(Math.max(0.03, dist(a, b)) / Math.max(0.03, dist(prev.a, prev.b)), 1.6);   // écarter du double agrandit d'environ 3 fois
+    const D = qMat(qFromTo(norm(sub(prev.b, prev.a)), norm(sub(b, a)))); W.A = mul3(D, W.A); W.s *= k; W.p = add(m, mulS(mv3(D, sub(W.p, m0)), k)); relink(m); }
+  prev = g.length ? { key, a: g[0].pos.slice(), q: g[0].quat.slice(), b: g[1] && g[1].pos.slice() } : null; }
 function pointed() { let best = null; for (const h of hands) { if (!h.tip) continue; for (const it of items) if (it.s < 0.6 && it.s > 0.012 && dist(h.tip, it.t) < it.s && (!best || it.s < best.s)) best = it; } return best ? best.n : cur(); }
 function readXR(frame, ref, session, dt) { hands = []; handCount = 0; const put = (p, r, c) => { if (handCount >= 120) return; const o = handCount++ * 7; handData[o] = p.x - head[0]; handData[o + 1] = p.y - head[1]; handData[o + 2] = p.z - head[2]; handData[o + 3] = c[0]; handData[o + 4] = c[1]; handData[o + 5] = c[2]; handData[o + 6] = r; };
   for (const src of session.inputSources) { const id = src.handedness; let pos = null, quat = [0, 0, 0, 1], pinch = false, tip = null, wrist = null;
@@ -158,7 +164,7 @@ function readXR(frame, ref, session, dt) { hands = []; handCount = 0; const put 
       for (const j of src.hand.values()) { const jp = frame.getJointPose(j, ref); if (jp) put(jp.transform.position, 0.0045, pinch ? [1, 0.85, 0.3] : [0.45, 0.85, 1]); } }
     else if (src.gripSpace) { const gp = frame.getPose(src.gripSpace, ref); if (gp) { const a = gp.transform.position, o = gp.transform.orientation; pos = tip = wrist = [a.x, a.y, a.z]; quat = [o.x, o.y, o.z, o.w];
         const ax = src.gamepad ? src.gamepad.axes : [], sy = ax.length >= 4 ? ax[3] : 0;   // joystick : pousser agrandit, tirer réduit, autour de la manette
-        if (Math.abs(sy) > 0.2) { const f = Math.exp(-sy * dt * 2.2); W.s *= f; W.p = add(pos, mulS(sub(W.p, pos), f)); if (relink(pos)) grabKey = null; }
+        if (Math.abs(sy) > 0.2) { const f = Math.exp(-sy * dt * 2.2); W.s *= f; W.p = add(pos, mulS(sub(W.p, pos), f)); relink(pos); }
         if (src.gamepad && src.gamepad.buttons[5] && src.gamepad.buttons[5].pressed) wantExit = true;   // bouton B ou Y : sortir
         const bt = src.gamepad ? src.gamepad.buttons : []; pinch = !!((bt[0] && bt[0].pressed) || (bt[1] && bt[1].pressed)); put(a, 0.012, pinch ? [1, 0.85, 0.3] : [0.45, 0.85, 1]); } }
     if (pos) hands.push({ id, pos, quat, pinch, tip, wrist }); }
@@ -189,8 +195,9 @@ async function enter(mode) { const etat = document.getElementById('etat');
     session.addEventListener('end', () => { xr = null; etat.textContent = 'Session terminée.'; requestAnimationFrame(flat); });
     const loop = (t, frame) => { session.requestAnimationFrame(loop); const pose = frame.getViewerPose(ref); if (!pose) return; const dt = tick(t);
       const hp = pose.transform.position, hm = pose.transform.matrix; head = [hp.x, hp.y, hp.z]; fwd = norm([-hm[8], -hm[9], -hm[10]]);
-      if (!placed || wantHome) { placed = true; wantHome = false; grabKey = null; const f = norm([fwd[0], 0, fwd[2]]); path = [{ n: CORPS }]; W.s = 0.5; W.A = qMat([0, Math.sin(Math.atan2(-f[0], -f[2]) / 2), 0, Math.cos(Math.atan2(-f[0], -f[2]) / 2)]); W.p = [head[0] + f[0] * 0.9, Math.max(0.9, head[1] - 0.35), head[2] + f[2] * 0.9]; }
-      DT = dt; readXR(frame, ref, session, dt); gestures(); place(INFO, 'left'); place(MENU, 'right'); menuTouch(); if (wantExit) { wantExit = false; session.end(); return; }
+      if (!placed || wantHome) { placed = true; wantHome = false; grabKey = null; const f = norm([fwd[0], 0, fwd[2]]); path = [{ n: CORPS }]; W.s = 0.5; W.A = qMat([0, Math.sin(Math.atan2(-f[0], -f[2]) / 2), 0, Math.cos(Math.atan2(-f[0], -f[2]) / 2)]); W.p = [head[0] + f[0] * 0.9, Math.max(0.9, head[1] - 0.35), head[2] + f[2] * 0.9];
+        anchor(INFO, head, f, 0.75, -0.12, 0.75); anchor(MENU, head, f, -0.75, -0.3, 0.6); prev = null; }
+      DT = dt; readXR(frame, ref, session, dt); gestures(); place(INFO); place(MENU); menuTouch(); if (wantExit) { wantExit = false; session.end(); return; }
       const v0 = layer.getViewport(pose.views[0]); F = pose.views[0].projectionMatrix[5] * v0.height / 2; buildList(); drawInfo(pointed()); drawMenu(); const pm = true;
       gl.bindFramebuffer(gl.FRAMEBUFFER, layer.framebuffer); gl.clearColor(0, 0, 0, mode === 'immersive-ar' ? 0 : 1); gl.clear(gl.COLOR_BUFFER_BIT);
       for (const view of pose.views) { const vp = layer.getViewport(view); gl.viewport(vp.x, vp.y, vp.width, vp.height); drawEye(view.projectionMatrix, view.transform.inverse.matrix, vp.height, pm); } };
@@ -220,5 +227,5 @@ canvas.addEventListener('wheel', e => { e.preventDefault(); if (xr) return; cons
   const [v, a] = await Promise.all([navigator.xr.isSessionSupported('immersive-vr').catch(() => false), navigator.xr.isSessionSupported('immersive-ar').catch(() => false)]);
   bv.disabled = !v; ba.disabled = !a; etat.textContent = v || a ? 'Casque détecté. Choisis un mode pour entrer.' : 'Aucun casque détecté par ce navigateur. Aperçu : glisse pour tourner, molette pour zoomer.'; })();
 requestAnimationFrame(flat);
-window.__vr = { state: () => ({ path: path.map(e => e.n.name), s: W.s, items: items.length, total, fps }), W, relink, push, pop, gestureTest: (hs) => { hands = hs; gestures(); return { p: W.p, s: W.s }; } };
+window.__vr = { menu: () => MENU.geo, poke: t => { POKE = t; }, state: () => ({ path: path.map(e => e.n.name), s: W.s, items: items.length, total, fps }), W, relink, push, pop, gestureTest: (hs) => { hands = hs; gestures(); return { p: W.p, s: W.s }; } };
 })();
