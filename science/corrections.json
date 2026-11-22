@@ -1,0 +1,341 @@
+[
+  {
+    "indice": 1,
+    "nom": "Quark down",
+    "verdict": "A_PRECISER",
+    "ancien": "Particule élémentaire de charge −1/3. Avec le quark up, il compose toute la matière de ton corps. On ne lui connaît aucune structure interne.",
+    "nouveau": "Particule élémentaire de charge −1/3. Avec le quark up, il compose les protons et les neutrons, donc presque toute la masse de ton corps. On ne lui connaît aucune structure interne.",
+    "motif": "« Toute la matière » oublie les électrons, qui ne sont pas faits de quarks. Les quarks up et down composent les nucléons, qui portent plus de 99,9 % de la masse.",
+    "sources": [
+      "Connaissance de manuel (pas d'URL vérifiée pendant la session) ; rapport de masse proton/électron : https://physics.nist.gov/cuu/pdf/wallet_2018.pdf"
+    ]
+  },
+  {
+    "indice": 6,
+    "nom": "Noyau d'hydrogène",
+    "verdict": "ERREUR",
+    "ancien": "Le cœur de l'atome : 1 proton, soudés par l'interaction forte. Il porte presque toute la masse dans un volume environ 100 000 fois plus étroit que l'atome.",
+    "nouveau": "Le cœur de l'atome : ici, un seul proton. Il porte presque toute la masse dans un espace environ 60 000 fois plus étroit que l'atome.",
+    "motif": "Texte gabarit inadapté : le noyau d'hydrogène est un proton unique, rien n'y est « soudé » à autre chose (faute d'accord incluse). Rapport de taille : rayon de Bohr 52 900 fm / rayon de charge du proton ≈ 0,84 fm ≈ 63 000, et non 100 000.",
+    "sources": [
+      "https://physics.nist.gov/cuu/pdf/wallet_2018.pdf",
+      "https://en.wikipedia.org/wiki/Charge_radius"
+    ]
+  },
+  {
+    "indice": 8,
+    "nom": "Noyau de carbone",
+    "verdict": "A_PRECISER",
+    "ancien": "Le cœur de l'atome : 6 protons et 6 neutrons, soudés par l'interaction forte. Il porte presque toute la masse dans un volume environ 100 000 fois plus étroit que l'atome.",
+    "nouveau": "Le cœur de l'atome : 6 protons et 6 neutrons, soudés par l'interaction forte. Il porte presque toute la masse dans un espace des dizaines de milliers de fois plus étroit que l'atome.",
+    "motif": "Le rapport de 100 000 est l'ordre de grandeur usuel « atome 10^-10 m / noyau 10^-15 m », mais pour ce noyau (rayon ≈ 1,2 fm × A^(1/3), soit 2,5 à 5 fm, contre un rayon atomique de 70 à 200 pm) le rapport des diamètres est plutôt de 20 000 à 50 000. De plus « volume … plus étroit » mélange volume et largeur : en volume, le rapport dépasse 10^13.",
+    "sources": [
+      "https://openstax.org/books/university-physics-volume-3/pages/10-1-properties-of-nuclei",
+      "https://en.wikipedia.org/wiki/Charge_radius"
+    ]
+  },
+  {
+    "indice": 10,
+    "nom": "Noyau d'azote",
+    "verdict": "A_PRECISER",
+    "ancien": "Le cœur de l'atome : 7 protons et 7 neutrons, soudés par l'interaction forte. Il porte presque toute la masse dans un volume environ 100 000 fois plus étroit que l'atome.",
+    "nouveau": "Le cœur de l'atome : 7 protons et 7 neutrons, soudés par l'interaction forte. Il porte presque toute la masse dans un espace des dizaines de milliers de fois plus étroit que l'atome.",
+    "motif": "Le rapport de 100 000 est l'ordre de grandeur usuel « atome 10^-10 m / noyau 10^-15 m », mais pour ce noyau (rayon ≈ 1,2 fm × A^(1/3), soit 2,5 à 5 fm, contre un rayon atomique de 70 à 200 pm) le rapport des diamètres est plutôt de 20 000 à 50 000. De plus « volume … plus étroit » mélange volume et largeur : en volume, le rapport dépasse 10^13.",
+    "sources": [
+      "https://openstax.org/books/university-physics-volume-3/pages/10-1-properties-of-nuclei",
+      "https://en.wikipedia.org/wiki/Charge_radius"
+    ]
+  },
+  {
+    "indice": 12,
+    "nom": "Noyau d'oxygène",
+    "verdict": "A_PRECISER",
+    "ancien": "Le cœur de l'atome : 8 protons et 8 neutrons, soudés par l'interaction forte. Il porte presque toute la masse dans un volume environ 100 000 fois plus étroit que l'atome.",
+    "nouveau": "Le cœur de l'atome : 8 protons et 8 neutrons, soudés par l'interaction forte. Il porte presque toute la masse dans un espace des dizaines de milliers de fois plus étroit que l'atome.",
+    "motif": "Le rapport de 100 000 est l'ordre de grandeur usuel « atome 10^-10 m / noyau 10^-15 m », mais pour ce noyau (rayon ≈ 1,2 fm × A^(1/3), soit 2,5 à 5 fm, contre un rayon atomique de 70 à 200 pm) le rapport des diamètres est plutôt de 20 000 à 50 000. De plus « volume … plus étroit » mélange volume et largeur : en volume, le rapport dépasse 10^13.",
+    "sources": [
+      "https://openstax.org/books/university-physics-volume-3/pages/10-1-properties-of-nuclei",
+      "https://en.wikipedia.org/wiki/Charge_radius"
+    ]
+  },
+  {
+    "indice": 14,
+    "nom": "Noyau de phosphore",
+    "verdict": "A_PRECISER",
+    "ancien": "Le cœur de l'atome : 15 protons et 16 neutrons, soudés par l'interaction forte. Il porte presque toute la masse dans un volume environ 100 000 fois plus étroit que l'atome.",
+    "nouveau": "Le cœur de l'atome : 15 protons et 16 neutrons, soudés par l'interaction forte. Il porte presque toute la masse dans un espace des dizaines de milliers de fois plus étroit que l'atome.",
+    "motif": "Le rapport de 100 000 est l'ordre de grandeur usuel « atome 10^-10 m / noyau 10^-15 m », mais pour ce noyau (rayon ≈ 1,2 fm × A^(1/3), soit 2,5 à 5 fm, contre un rayon atomique de 70 à 200 pm) le rapport des diamètres est plutôt de 20 000 à 50 000. De plus « volume … plus étroit » mélange volume et largeur : en volume, le rapport dépasse 10^13.",
+    "sources": [
+      "https://openstax.org/books/university-physics-volume-3/pages/10-1-properties-of-nuclei",
+      "https://en.wikipedia.org/wiki/Charge_radius"
+    ]
+  },
+  {
+    "indice": 16,
+    "nom": "Noyau de soufre",
+    "verdict": "A_PRECISER",
+    "ancien": "Le cœur de l'atome : 16 protons et 16 neutrons, soudés par l'interaction forte. Il porte presque toute la masse dans un volume environ 100 000 fois plus étroit que l'atome.",
+    "nouveau": "Le cœur de l'atome : 16 protons et 16 neutrons, soudés par l'interaction forte. Il porte presque toute la masse dans un espace des dizaines de milliers de fois plus étroit que l'atome.",
+    "motif": "Le rapport de 100 000 est l'ordre de grandeur usuel « atome 10^-10 m / noyau 10^-15 m », mais pour ce noyau (rayon ≈ 1,2 fm × A^(1/3), soit 2,5 à 5 fm, contre un rayon atomique de 70 à 200 pm) le rapport des diamètres est plutôt de 20 000 à 50 000. De plus « volume … plus étroit » mélange volume et largeur : en volume, le rapport dépasse 10^13.",
+    "sources": [
+      "https://openstax.org/books/university-physics-volume-3/pages/10-1-properties-of-nuclei",
+      "https://en.wikipedia.org/wiki/Charge_radius"
+    ]
+  },
+  {
+    "indice": 18,
+    "nom": "Noyau de calcium",
+    "verdict": "A_PRECISER",
+    "ancien": "Le cœur de l'atome : 20 protons et 20 neutrons, soudés par l'interaction forte. Il porte presque toute la masse dans un volume environ 100 000 fois plus étroit que l'atome.",
+    "nouveau": "Le cœur de l'atome : 20 protons et 20 neutrons, soudés par l'interaction forte. Il porte presque toute la masse dans un espace des dizaines de milliers de fois plus étroit que l'atome.",
+    "motif": "Le rapport de 100 000 est l'ordre de grandeur usuel « atome 10^-10 m / noyau 10^-15 m », mais pour ce noyau (rayon ≈ 1,2 fm × A^(1/3), soit 2,5 à 5 fm, contre un rayon atomique de 70 à 200 pm) le rapport des diamètres est plutôt de 20 000 à 50 000. De plus « volume … plus étroit » mélange volume et largeur : en volume, le rapport dépasse 10^13.",
+    "sources": [
+      "https://openstax.org/books/university-physics-volume-3/pages/10-1-properties-of-nuclei",
+      "https://en.wikipedia.org/wiki/Charge_radius"
+    ]
+  },
+  {
+    "indice": 20,
+    "nom": "Noyau de fer",
+    "verdict": "A_PRECISER",
+    "ancien": "Le cœur de l'atome : 26 protons et 30 neutrons, soudés par l'interaction forte. Il porte presque toute la masse dans un volume environ 100 000 fois plus étroit que l'atome.",
+    "nouveau": "Le cœur de l'atome : 26 protons et 30 neutrons, soudés par l'interaction forte. Il porte presque toute la masse dans un espace des dizaines de milliers de fois plus étroit que l'atome.",
+    "motif": "Le rapport de 100 000 est l'ordre de grandeur usuel « atome 10^-10 m / noyau 10^-15 m », mais pour ce noyau (rayon ≈ 1,2 fm × A^(1/3), soit 2,5 à 5 fm, contre un rayon atomique de 70 à 200 pm) le rapport des diamètres est plutôt de 20 000 à 50 000. De plus « volume … plus étroit » mélange volume et largeur : en volume, le rapport dépasse 10^13.",
+    "sources": [
+      "https://openstax.org/books/university-physics-volume-3/pages/10-1-properties-of-nuclei",
+      "https://en.wikipedia.org/wiki/Charge_radius"
+    ]
+  },
+  {
+    "indice": 33,
+    "nom": "ATP",
+    "verdict": "A_PRECISER",
+    "ancien": "Adénosine triphosphate : la pile rechargeable de la cellule. Casser la liaison du dernier phosphate libère l'énergie de presque tout ce que tu fais. Tu en recycles environ ton poids chaque jour.",
+    "nouveau": "Adénosine triphosphate : la pile rechargeable de la cellule. Quand l'eau détache son dernier phosphate, la réaction libère l'énergie de presque tout ce que tu fais. Tu en recycles environ ton poids chaque jour.",
+    "motif": "Idée fausse classique : rompre une liaison ne libère pas d'énergie, c'est la réaction d'hydrolyse dans son ensemble qui en libère. Le chiffre « ton poids par jour » est confirmé en ordre de grandeur (environ 1 poids corporel par jour selon BioNumbers ; 83 kg pour un homme sédentaire de 70 kg selon Berg, Biochemistry).",
+    "sources": [
+      "https://bionumbers.hms.harvard.edu/bionumber.aspx?id=105606",
+      "https://digfir-published.macmillanusa.com/berg8e/berg8e_ch18_1.html"
+    ]
+  },
+  {
+    "indice": 41,
+    "nom": "Hème",
+    "verdict": "A_PRECISER",
+    "ancien": "Un anneau plat avec un atome de fer au centre. C'est le fer qui retient une molécule d'oxygène, et qui donne au sang sa couleur rouge.",
+    "nouveau": "Un anneau plat avec un atome de fer au centre. Le fer retient une molécule d'oxygène ; l'anneau et son fer, ensemble, donnent au sang sa couleur rouge.",
+    "motif": "La couleur rouge vient de l'hème entier (anneau de porphyrine lié au fer), pas du fer seul : la phrase d'origine entretient l'idée répandue « sang rouge comme la rouille ».",
+    "sources": [
+      "Connaissance de manuel (pas d'URL vérifiée pendant la session)"
+    ]
+  },
+  {
+    "indice": 43,
+    "nom": "ADN",
+    "verdict": "A_PRECISER",
+    "ancien": "La double hélice : deux brins de sucres et de phosphates enroulés, reliés par des paires de bases (A–T, G–C). L'ordre des bases est le texte de tes gènes. Chaque cellule en contient environ 2 mètres.",
+    "nouveau": "La double hélice : deux brins de sucres et de phosphates enroulés, reliés par des paires de bases (A–T, G–C). L'ordre des bases est le texte de tes gènes. Chaque noyau de cellule en contient environ 2 mètres.",
+    "motif": "Les globules rouges, soit environ 84 % des cellules du corps en nombre (Sender 2016), n'ont ni noyau ni ADN ; la fiche « Globule rouge » le dit elle-même. Les 2 m (≈ 6,2 à 6,4 milliards de paires × 0,34 nm) valent pour un noyau diploïde.",
+    "sources": [
+      "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002533",
+      "https://www.thetech.org/ask-a-geneticist/articles/2017/two-genomes-cell/"
+    ]
+  },
+  {
+    "indice": 55,
+    "nom": "Rhodopsine",
+    "verdict": "A_PRECISER",
+    "ancien": "Le capteur de lumière des bâtonnets. Un seul photon suffit à changer sa forme et à déclencher un signal vers le cerveau.",
+    "nouveau": "Le capteur de lumière des bâtonnets. Un seul photon suffit à changer sa forme et à faire réagir le bâtonnet. Pour que tu perçoives une lueur, il en faut quelques-uns.",
+    "motif": "Un bâtonnet répond bien à un photon unique (Baylor, Lamb et Yau, 1979), mais la perception consciente demande plusieurs photons (Hecht 1942 : seuil de quelques photons absorbés). La détection d'un photon unique par l'humain (Tinsley 2016) est à peine au-dessus du hasard et discutée.",
+    "sources": [
+      "https://rupress.org/jgp/article/150/3/383/43686/The-discovery-of-the-ability-of-rod-photoreceptors",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC4960318"
+    ]
+  },
+  {
+    "indice": 65,
+    "nom": "Noyau",
+    "verdict": "A_PRECISER",
+    "ancien": "La bibliothèque de la cellule. Il abrite l'ADN : 46 chromosomes, environ 3 milliards de paires de bases. Les gènes y sont recopiés en ARN avant de partir vers le cytoplasme.",
+    "nouveau": "La bibliothèque de la cellule. Il abrite l'ADN : 46 chromosomes, soit deux exemplaires d'un texte d'environ 3 milliards de paires de bases. Les gènes y sont recopiés en ARN avant de partir vers le cytoplasme.",
+    "motif": "3 milliards de paires correspondent à UN exemplaire du génome (23 chromosomes). Les 46 chromosomes d'un noyau en portent environ 6 milliards, ce qui est cohérent avec les 2 m d'ADN cités ailleurs.",
+    "sources": [
+      "https://www.genome.gov/genetics-glossary/Base-Pair",
+      "https://www.thetech.org/ask-a-geneticist/articles/2017/two-genomes-cell/"
+    ]
+  },
+  {
+    "indice": 73,
+    "nom": "Neurone",
+    "verdict": "A_PRECISER",
+    "ancien": "La cellule qui pense. Ses dendrites (les branches) reçoivent les signaux, son long axone les envoie plus loin. Ton cerveau en compte environ 86 milliards, reliés par des milliers de milliards de synapses.",
+    "nouveau": "La cellule qui pense. Ses dendrites (les branches) reçoivent les signaux, son long axone les envoie plus loin. Ton cerveau en compte environ 86 milliards, reliés par plus de cent mille milliards de synapses.",
+    "motif": "Sous-estimation d'un facteur 100 et contradiction avec la fiche « Synapse » (100 000 milliards). Estimations : ≈ 1,5 × 10^14 pour le seul néocortex (Pakkenberg/Tang), 10^14 à 5 × 10^14 pour le cerveau entier. Les 86 milliards de neurones sont confirmés (Azevedo 2009 : 86,1 ± 8,1).",
+    "sources": [
+      "https://pubmed.ncbi.nlm.nih.gov/11418939/",
+      "https://aiimpacts.org/scale-of-the-human-brain/",
+      "https://pubmed.ncbi.nlm.nih.gov/19226510/"
+    ]
+  },
+  {
+    "indice": 86,
+    "nom": "Bâtonnet",
+    "verdict": "A_PRECISER",
+    "ancien": "Le photorécepteur de la vision nocturne. Son segment externe est une pile de disques couverts de rhodopsine, capable de détecter un seul photon. Ta rétine en compte environ 120 millions.",
+    "nouveau": "Le photorécepteur de la vision nocturne. Son segment externe est une pile de disques couverts de rhodopsine, capable de détecter un seul photon. Ta rétine en compte environ 100 millions.",
+    "motif": "120 millions est le chiffre ancien des manuels (Østerberg, 1935 ; attribution de mémoire). Le comptage de référence (Curcio 1990) donne 92 millions en moyenne (78 à 107). Fourchette : 90 à 120 millions. La réponse du bâtonnet à un photon unique est confirmée.",
+    "sources": [
+      "https://pubmed.ncbi.nlm.nih.gov/2324310/",
+      "https://rupress.org/jgp/article/150/3/383/43686/The-discovery-of-the-ability-of-rod-photoreceptors"
+    ]
+  },
+  {
+    "indice": 89,
+    "nom": "Vaisseau sanguin",
+    "verdict": "ERREUR",
+    "ancien": "Une artère ou une veine, vue de l'intérieur. Mis bout à bout, tes vaisseaux feraient environ 100 000 km. Le sang y charrie globules rouges, globules blancs, sucre, hormones et anticorps.",
+    "nouveau": "Une artère ou une veine, vue de l'intérieur. Mis bout à bout, tes vaisseaux feraient sans doute 10 000 à 20 000 km, et non les 100 000 souvent cités. Le sang y charrie globules rouges, globules blancs, sucre, hormones et anticorps.",
+    "motif": "Les 100 000 km remontent à une estimation d'August Krogh (années 1920) pour les capillaires d'un homme très musclé, avec une densité capillaire surestimée. Recalcul par Poole et coll. (2021) : 9 000 à 19 000 km de capillaires ; un autre article de la même équipe donne 6 000 à 15 000 km pour le muscle seul. Les capillaires dominent largement la longueur totale. Limite : texte intégral de Poole 2021 non consulté (accès bloqué), fourchette lue dans des sources secondaires concordantes.",
+    "sources": [
+      "https://doi.org/10.1016/j.cbpa.2020.110852",
+      "https://en.wikipedia.org/wiki/Blood_vessel",
+      "https://sites.google.com/view/sources-100k-blood-vessels/"
+    ]
+  },
+  {
+    "indice": 98,
+    "nom": "Faisceau musculaire",
+    "verdict": "A_PRECISER",
+    "ancien": "Un paquet de fibres musculaires parallèles, enveloppé de tissu conjonctif. Quand le nerf commande, toutes les fibres se raccourcissent ensemble. Les muscles représentent environ 40 % de ton poids.",
+    "nouveau": "Un paquet de fibres musculaires parallèles, enveloppé de tissu conjonctif. Quand le nerf commande, toutes les fibres se raccourcissent ensemble. Les muscles représentent 30 à 40 % de ton poids.",
+    "motif": "40 % est la valeur masculine haute. Mesure par IRM sur 468 adultes (Janssen 2000) : 38,4 % chez l'homme, 30,6 % chez la femme, en baisse avec l'âge.",
+    "sources": [
+      "https://pubmed.ncbi.nlm.nih.gov/10904038/"
+    ]
+  },
+  {
+    "indice": 99,
+    "nom": "Tissu cardiaque",
+    "verdict": "A_PRECISER",
+    "ancien": "Des cardiomyocytes soudés bout à bout en un réseau ramifié. Le signal électrique passe de cellule en cellule, et tout le cœur se contracte d'un seul coup, environ 100 000 fois par jour.",
+    "nouveau": "Des cardiomyocytes soudés bout à bout en un réseau ramifié. Le signal électrique passe de cellule en cellule, les oreillettes se contractent, puis les ventricules, environ 100 000 fois par jour.",
+    "motif": "Le cœur ne se contracte pas « d'un seul coup » : le nœud auriculo-ventriculaire retarde le signal d'environ un dixième de seconde, les oreillettes se contractent avant les ventricules, ce qui permet le remplissage. Les 100 000 battements par jour sont corrects (70/min).",
+    "sources": [
+      "Connaissance de manuel (pas d'URL vérifiée pendant la session) (physiologie cardiaque, ex. Guyton & Hall)"
+    ]
+  },
+  {
+    "indice": 100,
+    "nom": "Ostéon",
+    "verdict": "A_PRECISER",
+    "ancien": "L'unité de l'os compact : des lamelles concentriques autour d'un canal où passent vaisseaux et nerfs. L'os est vivant : ton squelette se renouvelle entièrement en une dizaine d'années.",
+    "nouveau": "L'unité de l'os compact : des lamelles concentriques autour d'un canal où passent vaisseaux et nerfs. L'os est vivant : sans cesse détruit et rebâti, ton squelette se renouvelle en une dizaine d'années en moyenne, l'os compact plus lentement que l'os spongieux.",
+    "motif": "« Environ 10 ans » est repris par des sources sérieuses (AAOS ; revues) mais c'est une moyenne : l'os spongieux se renouvelle en quelques années, l'os compact (celui de l'ostéon) plus lentement. « Entièrement » est trompeur. Taux annuels précis par type d'os non vérifiés en session.",
+    "sources": [
+      "https://orthoinfo.aaos.org/en/staying-healthy/bone-health-basics/",
+      "https://pubmed.ncbi.nlm.nih.gov/18988698/",
+      "https://www.pubmed.gov/23781526/"
+    ]
+  },
+  {
+    "indice": 109,
+    "nom": "Estomac",
+    "verdict": "A_PRECISER",
+    "ancien": "Une poche musclée qui brasse le repas dans un acide capable de dissoudre du métal (pH 1 à 2). Sa paroi se protège par une couche de mucus renouvelée en continu.",
+    "nouveau": "Une poche musclée qui brasse le repas dans un acide très fort (pH 1 à 2), capable de ronger certains métaux comme l'acier fin, mais pas tous. Sa paroi se protège par une couche de mucus renouvelée en continu.",
+    "motif": "Généralisation abusive. Étude in vitro (Li 1997, suc gastrique simulé) : des lames de rasoir en acier perdent 37 % de leur masse en 24 h, mais les pièces de monnaie restent intactes et les piles boutons résistent 24 h.",
+    "sources": [
+      "https://pubmed.ncbi.nlm.nih.gov/9283866/"
+    ]
+  },
+  {
+    "indice": 110,
+    "nom": "Rein",
+    "verdict": "A_PRECISER",
+    "ancien": "Deux filtres en forme de haricot. Ensemble ils filtrent tout ton sang environ 40 fois par jour, soit 180 litres, pour ne rejeter qu'un litre et demi d'urine.",
+    "nouveau": "Deux filtres en forme de haricot. Chaque jour, ils tirent du sang environ 180 litres de liquide, soit tout ton plasma filtré une soixantaine de fois, et n'en rejettent qu'un litre et demi sous forme d'urine.",
+    "motif": "Les 180 L/jour sont le filtrat glomérulaire (125 mL/min), tiré du plasma (≈ 3 L, valeur de manuel) et non du sang entier : le plasma est donc filtré ≈ 60 fois par jour (calcul du comité). « Tout ton sang 40 fois » confond filtrat et sang ; le sang lui-même traverse les reins environ 300 fois par jour (ERA). Les sources grand public divergent (20-25 fois, 300 fois ; le NIDDK donne 150 quarts sur une page, 200 sur une autre).",
+    "sources": [
+      "https://www.niddk.nih.gov/health-information/kidney-disease/kidneys-how-they-work",
+      "https://era-online.org/publications/understanding-kidneys"
+    ]
+  },
+  {
+    "indice": 113,
+    "nom": "Corps humain",
+    "verdict": "ERREUR",
+    "ancien": "Environ 37 000 milliards de cellules, et 7 milliards de milliards de milliards d'atomes, presque tous nés dans des étoiles. Chaque point s'ouvre quand tu t'en approches : choisis un endroit et zoome.",
+    "nouveau": "Environ 30 000 milliards de cellules, et 7 milliards de milliards de milliards d'atomes. Leur hydrogène date du Big Bang ; presque tout le reste, 90 % de ta masse, est né dans des étoiles. Chaque point s'ouvre quand tu t'en approches : choisis un endroit et zoome.",
+    "motif": "« Presque tous nés dans des étoiles » est faux en nombre d'atomes : l'hydrogène, environ 62 % des atomes du corps (fiche « Atome d'hydrogène »), vient du Big Bang. C'est vrai en masse (≈ 90 %). Cellules : 37 000 milliards (Bianconi 2013) est révisé ; 30 000 milliards pour un homme de 70 kg (Sender 2016), 36 000 pour un homme de 70 kg et 28 000 pour une femme de 60 kg (Hatton 2023). Fourchette : 28 000 à 37 000 milliards. Les 7 × 10^27 atomes sont cohérents avec la composition (calcul d'ordre de grandeur, pas de source directe).",
+    "sources": [
+      "https://chandra.si.edu/chemistry/",
+      "https://imagine.gsfc.nasa.gov/educators/elements/imagine/03.html",
+      "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002533",
+      "https://pubmed.ncbi.nlm.nih.gov/37722043/",
+      "https://en.wikipedia.org/wiki/Composition_of_the_human_body"
+    ]
+  },
+  {
+    "demo": 1,
+    "champ": "text",
+    "verdict": "A_PRECISER",
+    "ancien": "Il consomme presque autant d'énergie qu'éveillé. La nuit se découpe en cycles d'environ 90 minutes, quatre à six fois de suite. Chaque cycle traverse le sommeil léger, le sommeil profond, puis le sommeil paradoxal.",
+    "nouveau": "Il reste très actif : sa consommation d'énergie ne baisse que de 10 à 40 % en sommeil profond, et remonte au niveau de l'éveil pendant les rêves. La nuit se découpe en cycles d'environ 90 minutes, quatre à six fois de suite. Chaque cycle traverse le sommeil léger, le sommeil profond, puis le sommeil paradoxal.",
+    "motif": "« Presque autant » n'est vrai qu'en sommeil paradoxal. En sommeil lent profond, le métabolisme cérébral du glucose mesuré en TEP baisse de 12 % (Heiss 1985) à 44 % (Maquet 1990), ≈ 23 % selon Buchsbaum 1989 ; petits effectifs.",
+    "sources": [
+      "https://orbi.uliege.be/handle/2268/61927",
+      "https://www.osti.gov/biblio/5130888"
+    ]
+  },
+  {
+    "demo": 4,
+    "champ": "text",
+    "verdict": "A_PRECISER",
+    "ancien": "Pendant ces vagues, le cerveau rejoue en accéléré ce qu'il a vécu dans la journée. Les synapses utiles sont renforcées, beaucoup d'autres sont allégées pour faire de la place. C'est pour cela qu'on retient mieux après une nuit de sommeil.",
+    "nouveau": "Pendant ces vagues, le cerveau rejoue en accéléré une partie de ce qu'il a vécu dans la journée ; on l'a surtout observé chez le rat. Certaines synapses seraient renforcées, beaucoup d'autres allégées. C'est sans doute pour cela qu'on retient mieux après une nuit de sommeil.",
+    "motif": "Présenté comme acquis alors qu'il s'agit d'hypothèses étayées mais surtout établies chez le rongeur : rejeu hippocampique (rat ; connaissance de manuel), allègement synaptique (hypothèse d'homéostasie synaptique ; de Vivo 2017, microscopie électronique chez la souris).",
+    "sources": [
+      "https://www.nimh.nih.gov/news/science-updates/2017/sleep-may-trim-neural-connections-to-restore-learning-ability",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC5592216"
+    ]
+  },
+  {
+    "demo": 5,
+    "champ": "title",
+    "verdict": "A_PRECISER",
+    "ancien": "Le grand nettoyage",
+    "nouveau": "Le grand nettoyage ?",
+    "motif": "Le titre affirme un mécanisme aujourd'hui contesté (voir le texte).",
+    "sources": [
+      "https://doi.org/10.1038/s41593-024-01638-y",
+      "https://www.thetransmitter.org/glymphatic-system/new-method-reignites-controversy-over-brain-clearance-during-sleep/"
+    ]
+  },
+  {
+    "demo": 5,
+    "champ": "text",
+    "verdict": "A_PRECISER",
+    "ancien": "Entre les cellules, l'espace s'élargit et le liquide cérébrospinal circule plus librement. Il emporte les déchets accumulés pendant l'éveil. Ce système de drainage semble surtout actif pendant le sommeil profond ; les chercheurs l'étudient encore.",
+    "nouveau": "Une hypothèse célèbre : pendant le sommeil profond, le liquide cérébrospinal circulerait mieux entre les cellules et emporterait les déchets de la journée. Des expériences sur la souris l'ont montré en 2013, d'autres ont trouvé l'inverse en 2024. Les chercheurs en débattent encore.",
+    "motif": "Les trois premières phrases affirment comme un fait (espace élargi, déchets emportés) un résultat obtenu chez la souris (Xie 2013, Science) et contredit par Miao et coll. 2024 (Nature Neuroscience : élimination réduite pendant le sommeil et l'anesthésie), étude elle-même critiquée par l'équipe Nedergaard (2025). Controverse ouverte, aucune preuve directe chez l'humain dans les sources consultées.",
+    "sources": [
+      "https://doi.org/10.1126/science.1241224",
+      "https://doi.org/10.1038/s41593-024-01638-y",
+      "https://www.thetransmitter.org/glymphatic-system/new-method-reignites-controversy-over-brain-clearance-during-sleep/",
+      "https://doi.org/10.1038/s41593-025-01897-3"
+    ]
+  },
+  {
+    "demo": 7,
+    "champ": "text",
+    "verdict": "A_PRECISER",
+    "ancien": "Sommeil léger, profond, paradoxal : le cerveau refait ce parcours jusqu'au matin, avec de plus en plus de rêves en fin de nuit. Au réveil, les souvenirs sont rangés et le cerveau est nettoyé. Tu peux maintenant explorer librement.",
+    "nouveau": "Sommeil léger, profond, paradoxal : le cerveau refait ce parcours jusqu'au matin, avec de plus en plus de rêves en fin de nuit. Au réveil, les souvenirs sont mieux rangés, et le cerveau peut-être nettoyé. Tu peux maintenant explorer librement.",
+    "motif": "Mise en cohérence avec l'étape « grand nettoyage » : le nettoyage nocturne du cerveau est une hypothèse contestée.",
+    "sources": [
+      "https://doi.org/10.1038/s41593-024-01638-y",
+      "https://www.thetransmitter.org/glymphatic-system/new-method-reignites-controversy-over-brain-clearance-during-sleep/"
+    ]
+  }
+]

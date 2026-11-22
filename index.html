@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Le corps galaxie — VR</title>
+<style>
+  :root{color-scheme:dark}
+  html,body{height:100%;margin:0;background:#000;color:#f1f1ec;font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+  canvas{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:none;cursor:grab}
+  .hud{position:relative;pointer-events:none;padding:18px max(18px,env(safe-area-inset-left));max-width:520px}
+  .marque{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f94}
+  #lieu{margin:4px 0 14px;font-size:14px}
+  .actions{display:flex;flex-wrap:wrap;gap:10px;pointer-events:auto}
+  button{font:600 15px system-ui,sans-serif;padding:12px 18px;border-radius:999px;border:1px solid #f1f1ec;background:#f1f1ec;color:#000;cursor:pointer}
+  button.second{background:rgba(8,8,9,.9);color:#f1f1ec}
+  button:disabled{opacity:.35;cursor:not-allowed}
+  button:focus-visible{outline:2px solid #fff;outline-offset:3px}
+  #etat{margin:12px 0 0;color:#8f8f94;font-size:13px}
+  ul{margin:14px 0 0;padding-left:18px;color:#c9c9c4;font-size:13px}
+</style>
+</head>
+<body>
+<canvas id="vue" aria-label="Aperçu du corps humain en points"></canvas>
+<div class="hud">
+  <div class="marque">Le corps galaxie · prototype VR</div>
+  <div id="lieu">Corps humain</div>
+  <div class="actions">
+    <button id="vr" type="button">Entrer en réalité virtuelle</button>
+    <button id="ar" type="button" class="second">Réalité mixte (dans ta pièce)</button>
+  </div>
+  <p id="etat">Vérification du casque…</p>
+  <ul>
+    <li><b>Agrandir :</b> pince pouce et index des <b>deux</b> mains en même temps (un trait doré apparaît entre elles), puis écarte-les. Rapproche-les pour réduire.</li>
+    <li><b>Entrer dedans :</b> continue d'agrandir autour de ce qui t'intéresse. Tu passes dans l'organe, puis ses cellules, jusqu'aux atomes.</li>
+    <li><b>Attraper et retourner :</b> pince d'une seule main.</li>
+    <li><b>Explications :</b> la carte de ce que tu regardes est posée à ta droite.</li>
+    <li><b>Sortir :</b> à ta gauche, touche du bout de l'index « Quitter la VR » ou « Revenir au corps ».</li>
+    <li>Avec les manettes : gâchette pour pincer, joystick pour agrandir ou réduire, bouton B ou Y pour sortir.</li>
+  </ul>
+</div>
+<script src="model.js?v=4"></script>
+<script src="vr.js?v=4"></script>
+</body>
+</html>

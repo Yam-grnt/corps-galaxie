@@ -1,0 +1,16 @@
+.toolchain/
+plugin-voix/build/
+plugin-voix/.gradle/
+plugin-voix/local.properties
+serveur/node_modules/
+godot/build/
+godot/android/
+godot/.godot/
+*.apk
+essai-voix.wav
+# enregistrements de la voix : 390 Mo, refabriqués par outils/fabriquer-voix.js à partir de godot/voix/textes.json
+godot/voix/clips/
+# modèle de reconnaissance vocale : remis en place par plugin-voix/preparer.js
+plugin-voix/src/main/assets/
+*.lnk
+*.import

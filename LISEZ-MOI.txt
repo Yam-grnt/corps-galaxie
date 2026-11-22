@@ -1,0 +1,26 @@
+LE CORPS GALAXIE — contenu de l'archive
+=======================================
+
+corps-galaxie.apk
+    L'application native pour Meta Quest (Godot). À installer avec SideQuest.
+    Jamais essayée sur un vrai casque à ce jour.
+
+version-web-2d/index.html
+    La version d'origine, pour navigateur (souris, pad, téléphone) : zoom du corps jusqu'aux quarks,
+    couleurs, mise en avant, guide, démo sommeil. Double-clique pour l'ouvrir.
+    Les questions libres au guide ne marchent que sur la page claude.ai ; la reconnaissance des noms marche partout.
+
+index.html, vr.js, model.js
+    Le prototype VR pour le navigateur du Quest (WebXR). Il doit être servi en https ou depuis localhost :
+        npx serve .        (puis ouvrir l'adresse indiquée)
+
+godot/
+    Le projet Godot 4.4 de l'application native. Ouvre godot/project.godot avec Godot 4.4.1.
+    Pour fabriquer l'APK toi-même, il faut aussi : l'extension « Godot OpenXR Vendors » 4.0.0 dans godot/addons/,
+    les modèles d'export Android de Godot, le SDK Android et Java 17.
+    Sinon GitHub le fabrique tout seul à chaque envoi (.github/workflows/apk.yml).
+
+outils/exporter-modele.js
+    Régénère godot/modele.bin à partir de model.js :   node outils/exporter-modele.js
+
+Dépôt : https://github.com/Yam-grnt/corps-galaxie   (branche claude/prototype-vr)

@@ -1,0 +1,821 @@
+{
+ "noeuds": {
+  "0": {
+   "simple": "Un des plus petits grains de matière connus. Avec son cousin le quark down, il forme le cœur des atomes.",
+   "standard": "Particule élémentaire de charge plus deux tiers. À ce jour, personne n'a observé de structure plus petite à l'intérieur : ici s'arrête ce que la physique sait voir.",
+   "approfondi": "Fermion de charge plus deux tiers et de masse voisine de 2,2 mégaélectronvolts, environ quatre fois celle de l'électron. Il porte une charge de couleur et n'existe jamais seul : c'est le confinement. Les collisions ne lui trouvent aucune taille : s'il en a une, elle est inférieure à un milliardième de milliardième de mètre.",
+   "note": "Vue d'artiste : à cette échelle, ni forme ni couleur. Sa taille n'est connue que par une limite supérieure."
+  },
+  "1": {
+   "simple": "Le cousin du quark up. Ensemble, ils forment les protons et les neutrons, donc presque tout ton poids.",
+   "standard": "Particule élémentaire de charge moins un tiers. Avec le quark up, il compose les protons et les neutrons, donc presque toute la masse de ton corps. On ne lui connaît aucune structure interne.",
+   "approfondi": "Fermion de charge moins un tiers, de masse voisine de 4,7 mégaélectronvolts, environ le double de celle du quark up. Dans la radioactivité bêta, l'interaction faible change un quark down en quark up : le neutron devient proton en émettant un électron et un antineutrino.",
+   "note": "Vue d'artiste : à cette échelle, ni forme ni couleur. Sa taille n'est connue que par une limite supérieure."
+  },
+  "2": {
+   "simple": "Une particule minuscule et très légère qui entoure le noyau des atomes. En la partageant, les atomes s'accrochent entre eux.",
+   "standard": "Particule élémentaire de charge négative, environ 1 800 fois plus légère qu'un proton. Ce sont les électrons partagés entre atomes qui forment les liaisons chimiques.",
+   "approfondi": "Lepton de spin un demi, insensible à l'interaction forte, 1 836 fois plus léger que le proton. Dans l'atome, il n'a pas de trajectoire : il occupe une orbitale, région où l'on a une certaine probabilité de le trouver. Le principe d'exclusion de Pauli limite chaque orbitale à deux électrons.",
+   "note": "Vue d'artiste : l'électron n'a ni forme ni couleur, et aucune taille mesurée."
+  },
+  "3": {
+   "simple": "Une boule de trois quarks, chargée positivement. Le nombre de protons dit de quel atome il s'agit.",
+   "standard": "Deux quarks up et un quark down, tenus ensemble par les gluons (le nuage entre eux). Le nombre de protons décide de quel élément il s'agit : 6 pour le carbone, 8 pour l'oxygène.",
+   "approfondi": "Baryon de charge plus un : deux quarks up et un down liés par l'interaction forte. Son rayon de charge vaut environ 0,84 femtomètre, moins d'un millionième de milliardième de mètre. Ses trois quarks ne font qu'environ 1 pour cent de sa masse : le reste est l'énergie des gluons et du mouvement.",
+   "note": "Vue d'artiste : à cette échelle, ni forme ni couleur. Les quarks ne sont pas des billes immobiles."
+  },
+  "4": {
+   "simple": "Une boule de trois quarks, sans charge électrique. Il aide les protons à rester ensemble dans le noyau.",
+   "standard": "Un quark up et deux quarks down. Sans charge électrique, il sert de colle dans le noyau : il empêche les protons, qui se repoussent, de le faire éclater.",
+   "approfondi": "Baryon neutre, formé d'un quark up et de deux down, à peine plus lourd que le proton. L'interaction forte l'attire vers les autres nucléons sans répulsion électrique, ce qui stabilise le noyau. Hors du noyau, il se désintègre en un quart d'heure environ, en proton, électron et antineutrino.",
+   "note": "Vue d'artiste : à cette échelle, ni forme ni couleur. Les quarks ne sont pas des billes immobiles."
+  },
+  "5": {
+   "simple": "Le plus petit et le plus simple des atomes. Il y en a deux dans chaque molécule d'eau de ton corps.",
+   "standard": "Le plus simple des atomes : un proton, un électron. Il représente environ 62 pour cent des atomes de ton corps, surtout dans l'eau.",
+   "approfondi": "Dans son état fondamental, l'électron se trouve typiquement à 53 picomètres du proton : c'est le rayon de Bohr. Il faut 13,6 électronvolts pour l'arracher. Très léger, l'hydrogène représente 62 pour cent de tes atomes mais seulement 10 pour cent environ de ta masse.",
+   "note": "Électrons : un nuage de probabilité, pas des billes en orbite. Noyau dessiné des milliers de fois trop gros."
+  },
+  "6": {
+   "simple": "Au centre de l'atome d'hydrogène, il n'y a qu'un seul proton. Il est minuscule, mais pèse presque tout l'atome.",
+   "standard": "Le cœur de l'atome : ici, un seul proton. Il porte presque toute la masse dans un espace environ 60 000 fois plus étroit que l'atome.",
+   "approfondi": "Un proton seul, de rayon 0,84 femtomètre, face à un atome de 53 picomètres de rayon : un rapport d'environ 63 000. Il concentre 99,95 pour cent de la masse de l'atome. Dans environ 0,015 pour cent des atomes d'hydrogène, un neutron l'accompagne : c'est le deutérium.",
+   "note": "Vue d'artiste : protons et neutrons ne sont pas des billes colorées. Ni forme ni couleur à cette échelle."
+  },
+  "7": {
+   "simple": "L'atome qui sert de charpente au vivant. Il s'accroche à quatre voisins, comme une brique à quatre tenons.",
+   "standard": "Le squelette de la vie. Il peut former quatre liaisons, ce qui permet les chaînes et les anneaux de toutes les molécules biologiques.",
+   "approfondi": "Ses quatre électrons de valence lui permettent quatre liaisons covalentes, simples, doubles ou triples. Une liaison simple entre deux carbones mesure environ 0,15 nanomètre et résiste bien à la température du corps. Le carbone fait environ 18 pour cent de ta masse.",
+   "note": "Électrons : un nuage de probabilité, pas des billes en orbite. Noyau dessiné des milliers de fois trop gros."
+  },
+  "8": {
+   "simple": "Le centre de l'atome de carbone : 6 protons et 6 neutrons serrés ensemble. Minuscule, il pèse presque tout l'atome.",
+   "standard": "Le cœur de l'atome : 6 protons et 6 neutrons, soudés par l'interaction forte. Il porte presque toute la masse dans un espace des dizaines de milliers de fois plus étroit que l'atome.",
+   "approfondi": "Carbone 12 : 12 nucléons liés par environ 7,7 mégaélectronvolts chacun, dans un rayon proche de 2,5 femtomètres. Il naît dans les étoiles par fusion de trois noyaux d'hélium. C'est l'isotope de 99 pour cent du carbone ; le carbone 14, radioactif, sert à dater les vestiges.",
+   "note": "Vue d'artiste : protons et neutrons ne sont pas des billes colorées. Ni forme ni couleur à cette échelle."
+  },
+  "9": {
+   "simple": "Un atome indispensable pour fabriquer les protéines et l'ADN. Il vient de ce que tu manges, pas de l'air.",
+   "standard": "Présent dans chaque acide aminé et dans chaque base de l'ADN. Sans azote, ni protéines ni gènes.",
+   "approfondi": "L'air en contient 78 pour cent, sous forme de diazote dont la triple liaison est trop solide pour tes cellules. Seuls certains microbes savent la casser ; tu reçois ton azote par les protéines de ton alimentation. Il fait environ 3 pour cent de ta masse et sort surtout sous forme d'urée.",
+   "note": "Électrons : un nuage de probabilité, pas des billes en orbite. Noyau dessiné des milliers de fois trop gros."
+  },
+  "10": {
+   "simple": "Le centre de l'atome d'azote : 7 protons et 7 neutrons serrés ensemble. Minuscule, il pèse presque tout l'atome.",
+   "standard": "Le cœur de l'atome : 7 protons et 7 neutrons, soudés par l'interaction forte. Il porte presque toute la masse dans un espace des dizaines de milliers de fois plus étroit que l'atome.",
+   "approfondi": "Azote 14 : 14 nucléons liés par environ 7,5 mégaélectronvolts chacun. C'est l'un des rares noyaux stables à nombres impairs de protons et de neutrons. Il représente 99,6 pour cent de l'azote naturel. Dans la haute atmosphère, les rayons cosmiques le transforment en carbone 14.",
+   "note": "Vue d'artiste : protons et neutrons ne sont pas des billes colorées. Ni forme ni couleur à cette échelle."
+  },
+  "11": {
+   "simple": "L'atome qui pèse le plus lourd dans ton corps : plus de la moitié de ton poids, surtout dans l'eau.",
+   "standard": "Il attire fortement les électrons. Environ 65 pour cent de la masse de ton corps est de l'oxygène, principalement sous forme d'eau.",
+   "approfondi": "Deuxième élément le plus électronégatif après le fluor, il tire vers lui les électrons de ses liaisons. La liaison entre oxygène et hydrogène est donc polaire, ce qui explique les liaisons hydrogène de l'eau. Il fait 65 pour cent de ta masse, mais environ un quart seulement de tes atomes.",
+   "note": "Électrons : un nuage de probabilité, pas des billes en orbite. Noyau dessiné des milliers de fois trop gros."
+  },
+  "12": {
+   "simple": "Le centre de l'atome d'oxygène : 8 protons et 8 neutrons serrés ensemble. Minuscule, il pèse presque tout l'atome.",
+   "standard": "Le cœur de l'atome : 8 protons et 8 neutrons, soudés par l'interaction forte. Il porte presque toute la masse dans un espace des dizaines de milliers de fois plus étroit que l'atome.",
+   "approfondi": "Oxygène 16 : 16 nucléons liés par près de 8 mégaélectronvolts chacun. Avec 8 protons et 8 neutrons, deux nombres dits magiques, ses couches nucléaires sont complètes, ce qui le rend très stable. Il représente 99,76 pour cent de l'oxygène et se forme dans les étoiles par fusion de l'hélium avec le carbone.",
+   "note": "Vue d'artiste : protons et neutrons ne sont pas des billes colorées. Ni forme ni couleur à cette échelle."
+  },
+  "13": {
+   "simple": "Un atome qu'on trouve dans tes os, dans ton ADN et dans les molécules qui transportent l'énergie.",
+   "standard": "L'atome de l'énergie et de l'ossature : au centre des phosphates de l'ADN, de l'ATP et du minéral des os.",
+   "approfondi": "Dans le vivant, il est presque toujours au centre d'un phosphate, lié à quatre oxygènes. Il fait environ 1 pour cent de ta masse, soit quelque 700 grammes pour 70 kilogrammes, dont environ 85 pour cent dans les os et les dents.",
+   "note": "Électrons : un nuage de probabilité, pas des billes en orbite. Noyau dessiné des milliers de fois trop gros."
+  },
+  "14": {
+   "simple": "Le centre de l'atome de phosphore : 15 protons et 16 neutrons serrés ensemble. Minuscule, il pèse presque tout l'atome.",
+   "standard": "Le cœur de l'atome : 15 protons et 16 neutrons, soudés par l'interaction forte. Il porte presque toute la masse dans un espace des dizaines de milliers de fois plus étroit que l'atome.",
+   "approfondi": "Phosphore 31 : 31 nucléons liés par environ 8,5 mégaélectronvolts chacun. C'est le seul isotope stable du phosphore. Le phosphore 32, radioactif avec une demi-vie de 14 jours, a servi de traceur en 1952 pour montrer que l'ADN porte l'hérédité.",
+   "note": "Vue d'artiste : protons et neutrons ne sont pas des billes colorées. Ni forme ni couleur à cette échelle."
+  },
+  "15": {
+   "simple": "Un atome qui fait des attaches solides dans certaines protéines. Il rend tes cheveux et tes ongles résistants.",
+   "standard": "Il forme des ponts entre deux parties d'une protéine et la maintient pliée. C'est lui qui rend la kératine des cheveux solide.",
+   "approfondi": "Présent dans deux acides aminés, la cystéine et la méthionine. Deux cystéines oxydées forment un pont disulfure, liaison covalente entre deux soufres, qui fige le repliement d'une protéine. Le soufre fait environ 0,25 pour cent de ta masse.",
+   "note": "Électrons : un nuage de probabilité, pas des billes en orbite. Noyau dessiné des milliers de fois trop gros."
+  },
+  "16": {
+   "simple": "Le centre de l'atome de soufre : 16 protons et 16 neutrons serrés ensemble. Minuscule, il pèse presque tout l'atome.",
+   "standard": "Le cœur de l'atome : 16 protons et 16 neutrons, soudés par l'interaction forte. Il porte presque toute la masse dans un espace des dizaines de milliers de fois plus étroit que l'atome.",
+   "approfondi": "Soufre 32 : 32 nucléons liés par environ 8,5 mégaélectronvolts chacun. Il représente 95 pour cent du soufre naturel. Les étoiles massives le forment en ajoutant des noyaux d'hélium, un à un, à des noyaux plus légers.",
+   "note": "Vue d'artiste : protons et neutrons ne sont pas des billes colorées. Ni forme ni couleur à cette échelle."
+  },
+  "17": {
+   "simple": "L'atome qui rend tes os et tes dents durs. Il donne aussi le signal aux muscles pour se contracter.",
+   "standard": "Le métal le plus abondant du corps : 99 pour cent est dans les os et les dents. Le reste déclenche la contraction des muscles et les signaux nerveux.",
+   "approfondi": "Ton corps en contient environ un kilogramme. Sous forme d'ion portant deux charges positives, c'est un messager : la cellule le maintient environ 10 000 fois moins concentré à l'intérieur qu'à l'extérieur, et la moindre entrée déclenche contraction, sécrétion ou libération de neurotransmetteurs.",
+   "note": "Électrons : un nuage de probabilité, pas des billes en orbite. Noyau dessiné des milliers de fois trop gros."
+  },
+  "18": {
+   "simple": "Le centre de l'atome de calcium : 20 protons et 20 neutrons serrés ensemble. Minuscule, il pèse presque tout l'atome.",
+   "standard": "Le cœur de l'atome : 20 protons et 20 neutrons, soudés par l'interaction forte. Il porte presque toute la masse dans un espace des dizaines de milliers de fois plus étroit que l'atome.",
+   "approfondi": "Calcium 40 : 40 nucléons liés par environ 8,6 mégaélectronvolts chacun. Avec 20 protons et 20 neutrons, deux nombres magiques, il est particulièrement stable : c'est le plus lourd des noyaux stables à nombres égaux de protons et de neutrons. Il représente 97 pour cent du calcium.",
+   "note": "Vue d'artiste : protons et neutrons ne sont pas des billes colorées. Ni forme ni couleur à cette échelle."
+  },
+  "19": {
+   "simple": "L'atome qui attrape l'oxygène dans ton sang. Tout ton corps en contient à peu près le poids d'un clou.",
+   "standard": "Au centre de l'hème, c'est lui qui accroche l'oxygène dans le sang. Ton corps en contient 3 à 4 grammes.",
+   "approfondi": "Dans l'hème, c'est l'ion ferreux, porteur de deux charges positives, qui lie le dioxygène de façon réversible. Environ les deux tiers de tes 3 à 4 grammes de fer sont dans l'hémoglobine ; le reste est stocké dans la ferritine ou sert à la myoglobine et à des enzymes.",
+   "note": "Électrons : un nuage de probabilité, pas des billes en orbite. Noyau dessiné des milliers de fois trop gros."
+  },
+  "20": {
+   "simple": "Le centre de l'atome de fer : 26 protons et 30 neutrons serrés ensemble. Minuscule, il pèse presque tout l'atome.",
+   "standard": "Le cœur de l'atome : 26 protons et 30 neutrons, soudés par l'interaction forte. Il porte presque toute la masse dans un espace des dizaines de milliers de fois plus étroit que l'atome.",
+   "approfondi": "Fer 56 : 56 nucléons liés par environ 8,8 mégaélectronvolts chacun, l'une des valeurs les plus élevées de tous les noyaux. Ni la fusion ni la fission ne peuvent donc en tirer d'énergie : c'est la fin de la fusion dans les étoiles massives. Il représente près de 92 pour cent du fer naturel.",
+   "note": "Vue d'artiste : protons et neutrons ne sont pas des billes colorées. Ni forme ni couleur à cette échelle."
+  },
+  "21": {
+   "simple": "Un atome d'oxygène et deux d'hydrogène. Plus de la moitié de ton corps est de l'eau.",
+   "standard": "Un atome d'oxygène et deux d'hydrogène. Environ 60 pour cent de ton corps : presque toutes les réactions de la vie se déroulent dans l'eau.",
+   "approfondi": "Molécule coudée, avec un angle de 104,5 degrés entre ses deux liaisons. L'oxygène attire les électrons : la molécule est polaire et forme des liaisons hydrogène avec ses voisines, ce qui en fait un si bon solvant. Elle représente environ 60 pour cent de ta masse, entre 50 et 65 selon l'âge et le sexe.",
+   "note": "Modèle en boules : les atomes n'ont ni couleur ni bord net. Les couleurs sont un code."
+  },
+  "22": {
+   "simple": "Le gaz que tu respires. Tes cellules en ont besoin pour tirer de l'énergie de ta nourriture.",
+   "standard": "Deux atomes d'oxygène liés. Inspiré par les poumons, transporté par le sang, il sert aux mitochondries à extraire l'énergie du sucre.",
+   "approfondi": "Il fait 21 pour cent de l'air. Dans la mitochondrie, il est l'accepteur final des électrons de la chaîne respiratoire et finit réduit en eau. Au repos, tu en consommes environ 250 millilitres par minute, presque entièrement transportés par l'hémoglobine.",
+   "note": "Modèle en boules : les atomes n'ont ni couleur ni bord net. Les couleurs sont un code."
+  },
+  "23": {
+   "simple": "Le gaz que tu rejettes en soufflant. C'est le déchet de tes cellules quand elles brûlent leur carburant.",
+   "standard": "Le déchet de la respiration des cellules. Le sang le ramène aux poumons, qui le rejettent à chaque expiration.",
+   "approfondi": "Produit surtout par le cycle de Krebs dans les mitochondries, à raison d'environ 200 millilitres par minute au repos. Dans le sang, il voyage en majorité sous forme d'ions bicarbonate, grâce à l'enzyme anhydrase carbonique. C'est sa concentration, plus que le manque d'oxygène, qui règle ton rythme respiratoire.",
+   "note": "Modèle en boules : les atomes n'ont ni couleur ni bord net. Les couleurs sont un code."
+  },
+  "24": {
+   "simple": "Une des quatre lettres de l'alphabet de l'ADN. En face d'elle, il y a toujours la lettre T.",
+   "standard": "Une des quatre lettres du code génétique. Dans l'ADN, elle s'apparie toujours avec la thymine ; dans l'ARN, avec l'uracile.",
+   "approfondi": "Une purine, base à deux cycles accolés. Elle s'apparie avec la thymine par deux liaisons hydrogène. On la retrouve dans l'ATP et dans plusieurs coenzymes. Dans le génome humain, elle représente près de 30 pour cent des bases, autant que la thymine.",
+   "note": "Modèle en boules : les atomes n'ont ni couleur ni bord net. Les couleurs sont un code."
+  },
+  "25": {
+   "simple": "Une des quatre lettres de l'alphabet de l'ADN. En face d'elle, il y a toujours la lettre C.",
+   "standard": "Une des quatre lettres du code génétique. Elle s'apparie avec la cytosine par trois liaisons hydrogène, une paire plus solide que celle de l'adénine et de la thymine.",
+   "approfondi": "Une purine, base à deux cycles accolés. Ses trois liaisons hydrogène avec la cytosine rendent les régions riches en G et C plus difficiles à ouvrir. Guanine et cytosine forment ensemble environ 41 pour cent des bases du génome humain.",
+   "note": "Modèle en boules : les atomes n'ont ni couleur ni bord net. Les couleurs sont un code."
+  },
+  "26": {
+   "simple": "Une des quatre lettres de l'alphabet de l'ADN. En face d'elle, il y a toujours la lettre G.",
+   "standard": "Une des quatre lettres du code génétique. Elle fait face à la guanine sur le brin opposé.",
+   "approfondi": "Une pyrimidine, base à un seul cycle. La cellule peut lui ajouter un groupe méthyle quand elle est suivie d'une guanine : cette marque épigénétique aide à éteindre des gènes sans changer le texte. Chez l'humain, 70 à 80 pour cent de ces sites sont méthylés.",
+   "note": "Modèle en boules : les atomes n'ont ni couleur ni bord net. Les couleurs sont un code."
+  },
+  "27": {
+   "simple": "Une des quatre lettres de l'alphabet de l'ADN. En face d'elle, il y a toujours la lettre A.",
+   "standard": "Une des quatre lettres de l'ADN, partenaire de l'adénine. Dans l'ARN, elle est remplacée par l'uracile.",
+   "approfondi": "Une pyrimidine : c'est un uracile portant un groupe méthyle. Elle s'apparie avec l'adénine par deux liaisons hydrogène. Les ultraviolets peuvent souder deux thymines voisines en un dimère qui déforme l'hélice ; des enzymes de réparation l'excisent.",
+   "note": "Modèle en boules : les atomes n'ont ni couleur ni bord net. Les couleurs sont un code."
+  },
+  "28": {
+   "simple": "Une lettre qu'on trouve seulement dans l'ARN. Elle y remplace la lettre T de l'ADN.",
+   "standard": "La lettre propre à l'ARN : elle prend la place de la thymine et s'apparie avec l'adénine.",
+   "approfondi": "Une pyrimidine, sans le groupe méthyle de la thymine. Dans l'ADN, une cytosine se change spontanément en uracile, de l'ordre de cent à quelques centaines de fois par jour dans chaque cellule. Une enzyme retire ces uraciles : utiliser la thymine permet de repérer l'erreur.",
+   "note": "Modèle en boules : les atomes n'ont ni couleur ni bord net. Les couleurs sont un code."
+  },
+  "29": {
+   "simple": "Le sucre qui sert de maillon à la chaîne de l'ADN. Il est très stable, parfait pour garder un message longtemps.",
+   "standard": "Le sucre à cinq carbones de l'ADN. Il lui manque un oxygène par rapport au ribose, d'où le « désoxy » : ce détail rend l'ADN plus stable que l'ARN.",
+   "approfondi": "Pentose en forme de cycle. Chaque sucre porte une base et se lie à deux phosphates par ses carbones numéros 3 et 5, ce qui oriente le brin. L'absence d'hydroxyle sur le carbone 2 empêche la chaîne de se couper elle-même, comme le fait l'ARN.",
+   "note": "Modèle en boules : les atomes n'ont ni couleur ni bord net. Les couleurs sont un code."
+  },
+  "30": {
+   "simple": "Le sucre qui sert de maillon à la chaîne de l'ARN. On le trouve aussi dans l'ATP.",
+   "standard": "Le sucre à cinq carbones de l'ARN et de l'ATP.",
+   "approfondi": "Pentose en forme de cycle : cinq carbones, dix hydrogènes et cinq oxygènes. Son hydroxyle sur le carbone 2 rend l'ARN plus réactif et moins durable que l'ADN. La cellule le fabrique à partir du glucose par la voie des pentoses phosphates.",
+   "note": "Modèle en boules : les atomes n'ont ni couleur ni bord net. Les couleurs sont un code."
+  },
+  "31": {
+   "simple": "Un atome de phosphore entouré d'oxygènes. Il attache les maillons de l'ADN et sert à porter l'énergie.",
+   "standard": "Un atome de phosphore entouré d'oxygènes. Il relie les sucres entre eux pour former le squelette de l'ADN, et stocke l'énergie dans l'ATP.",
+   "approfondi": "Un phosphore lié à quatre oxygènes, chargé négativement au pH de la cellule : l'ADN porte ainsi une charge négative par nucléotide. Ajouter ou retirer un phosphate à une protéine l'active ou l'éteint ; plus de 500 enzymes humaines, les kinases, s'en chargent.",
+   "note": "Modèle en boules : les atomes n'ont ni couleur ni bord net. Les couleurs sont un code."
+  },
+  "32": {
+   "simple": "Le sucre que ton sang apporte à toutes tes cellules. C'est leur carburant principal.",
+   "standard": "Le sucre que le sang distribue à toutes les cellules. Les mitochondries le brûlent avec l'oxygène pour fabriquer de l'ATP.",
+   "approfondi": "Sucre à six carbones. Le sang en contient environ 1 gramme par litre à jeun. La glycolyse le coupe en deux pyruvates dans le cytoplasme, puis les mitochondries achèvent son oxydation : une trentaine d'ATP par molécule au total. Ton cerveau en consomme environ 120 grammes par jour.",
+   "note": "Modèle en boules : les atomes n'ont ni couleur ni bord net. Les couleurs sont un code."
+  },
+  "33": {
+   "simple": "La petite pile rechargeable de tes cellules. Elle donne son énergie, puis se fait recharger, encore et encore.",
+   "standard": "Adénosine triphosphate : la pile rechargeable de la cellule. Quand l'eau détache son dernier phosphate, la réaction libère l'énergie de presque tout ce que tu fais. Tu en recycles environ ton poids chaque jour.",
+   "approfondi": "Un nucléotide : adénine, ribose et trois phosphates. Son hydrolyse en ADP et phosphate libère environ 30 kilojoules par mole dans les conditions standard, et plutôt 50 dans la cellule. L'ATP synthase des mitochondries le régénère aussitôt : tu en recycles ainsi environ ton poids chaque jour.",
+   "note": "Modèle en boules : les atomes n'ont ni couleur ni bord net. Les couleurs sont un code."
+  },
+  "34": {
+   "simple": "La plus petite des vingt briques qui composent les protéines. Elle se glisse là où les autres ne passent pas.",
+   "standard": "Le plus petit des 20 acides aminés. Sa petite taille permet aux chaînes de se serrer : un tiers du collagène est de la glycine.",
+   "approfondi": "Sa chaîne latérale se réduit à un atome d'hydrogène : c'est le seul acide aminé non chiral. Dans le collagène, elle revient tous les trois résidus, seule assez petite pour loger au centre de la triple hélice. C'est aussi un neurotransmetteur inhibiteur dans la moelle épinière.",
+   "note": "Modèle en boules : les atomes n'ont ni couleur ni bord net. Les couleurs sont un code."
+  },
+  "35": {
+   "simple": "Une des vingt briques qui composent les protéines. Simple et très courante.",
+   "standard": "Un acide aminé simple, avec un groupe méthyle pour chaîne latérale. Une brique courante des protéines.",
+   "approfondi": "Petit acide aminé hydrophobe, fréquent dans les hélices alpha. Il compte pour environ 8 pour cent des acides aminés des protéines. Le muscle s'en sert aussi pour envoyer de l'azote au foie, qui la reconvertit en glucose : c'est le cycle glucose-alanine.",
+   "note": "Modèle en boules : les atomes n'ont ni couleur ni bord net. Les couleurs sont un code."
+  },
+  "36": {
+   "simple": "Une brique des protéines qui contient du soufre. Deux cystéines peuvent s'accrocher l'une à l'autre comme une agrafe.",
+   "standard": "Acide aminé porteur d'un atome de soufre. Deux cystéines peuvent se souder et verrouiller la forme d'une protéine.",
+   "approfondi": "Sa chaîne latérale se termine par un groupe thiol, un soufre lié à un hydrogène. Deux thiols oxydés forment un pont disulfure, surtout dans les protéines sécrétées, assemblées dans le réticulum endoplasmique. L'insuline, par exemple, en compte trois.",
+   "note": "Modèle en boules : les atomes n'ont ni couleur ni bord net. Les couleurs sont un code."
+  },
+  "37": {
+   "simple": "Une brique des protéines qui aime l'eau. La cellule s'en sert comme d'un interrupteur pour allumer ou éteindre une protéine.",
+   "standard": "Acide aminé avec un groupe hydroxyle, noté OH, qui aime l'eau. C'est souvent là que la cellule accroche un phosphate pour activer ou éteindre une protéine.",
+   "approfondi": "Acide aminé polaire. Des kinases transfèrent le dernier phosphate d'un ATP sur son hydroxyle, ce qui change la forme et l'activité de la protéine ; des phosphatases l'enlèvent. La sérine est de loin la cible la plus fréquente, devant la thréonine et la tyrosine.",
+   "note": "Modèle en boules : les atomes n'ont ni couleur ni bord net. Les couleurs sont un code."
+  },
+  "38": {
+   "simple": "Une brique des protéines, mais aussi un messager : dans le cerveau, il dit au neurone voisin de s'activer.",
+   "standard": "Un acide aminé, mais aussi le principal messager excitateur du cerveau : libéré dans la synapse, il transmet le signal au neurone suivant.",
+   "approfondi": "Acide aminé chargé négativement, et neurotransmetteur d'environ 80 pour cent des neurones du cortex. Il ouvre les récepteurs AMPA et NMDA du neurone suivant. Les astrocytes le recapturent en quelques millisecondes et le recyclent en glutamine, car en excès il devient toxique pour les neurones.",
+   "note": "Modèle en boules : les atomes n'ont ni couleur ni bord net. Les couleurs sont un code."
+  },
+  "39": {
+   "simple": "Une petite molécule avec une tête qui aime l'eau et deux queues qui la fuient. Ensemble, elles forment la peau des cellules.",
+   "standard": "Une tête qui aime l'eau (phosphate) et deux queues grasses qui la fuient. Mis ensemble, ils s'alignent tout seuls en double couche : c'est la membrane.",
+   "approfondi": "Molécule amphiphile : un glycérol porte deux acides gras, de 16 à 18 carbones le plus souvent, et un phosphate lié à une tête polaire. Dans la bicouche, chaque lipide change de voisin des millions de fois par seconde, mais ne bascule presque jamais d'un feuillet à l'autre.",
+   "note": "Modèle en boules : les atomes n'ont ni couleur ni bord net. Les couleurs sont un code."
+  },
+  "40": {
+   "simple": "Une petite molécule avec une tête qui aime l'eau et deux queues qui la fuient. Ensemble, elles forment la peau des cellules.",
+   "standard": "Une tête qui aime l'eau (phosphate) et deux queues grasses qui la fuient. Mis ensemble, ils s'alignent tout seuls en double couche : c'est la membrane.",
+   "approfondi": "Molécule amphiphile : un glycérol porte deux acides gras, de 16 à 18 carbones le plus souvent, et un phosphate lié à une tête polaire. Dans la bicouche, chaque lipide change de voisin des millions de fois par seconde, mais ne bascule presque jamais d'un feuillet à l'autre.",
+   "note": "Modèle en boules : les atomes n'ont ni couleur ni bord net. Les couleurs sont un code."
+  },
+  "41": {
+   "simple": "Un petit anneau avec un atome de fer au milieu. Il attrape l'oxygène et donne au sang sa couleur rouge.",
+   "standard": "Un anneau plat avec un atome de fer au centre. Le fer retient une molécule d'oxygène ; l'anneau et son fer, ensemble, donnent au sang sa couleur rouge.",
+   "approfondi": "Une porphyrine dont quatre azotes tiennent un ion fer ferreux. Le fer se lie d'un côté à une histidine de la globine, de l'autre au dioxygène. Le monoxyde de carbone s'y fixe 200 à 250 fois plus fortement, d'où sa toxicité. L'hème usé est dégradé en bilirubine.",
+   "note": "Modèle en boules : les atomes n'ont ni couleur ni bord net. Les couleurs sont un code."
+  },
+  "42": {
+   "simple": "Le minéral qui rend tes os et tes dents durs comme de la pierre. Il est fait de calcium et de phosphate.",
+   "standard": "Le minéral de l'os : calcium et phosphate rangés en cristal. Il donne à l'os sa dureté, le collagène lui donne sa souplesse.",
+   "approfondi": "Phosphate de calcium cristallisé : dix calciums, six phosphates et deux hydroxyles par maille. Ses cristaux, plaquettes de quelques nanomètres d'épaisseur, se déposent sur les fibres de collagène. Il forme 60 à 70 pour cent de la masse de l'os, et environ 96 pour cent de l'émail des dents.",
+   "note": "Modèle en boules : les atomes n'ont ni couleur ni bord net. Les couleurs sont un code."
+  },
+  "43": {
+   "simple": "Une très longue échelle torsadée. L'ordre de ses barreaux forme la recette pour te fabriquer.",
+   "standard": "La double hélice : deux brins de sucres et de phosphates enroulés, reliés par des paires de bases (A avec T, G avec C). L'ordre des bases est le texte de tes gènes. Chaque noyau de cellule en contient environ 2 mètres.",
+   "approfondi": "Deux brins antiparallèles forment une hélice de 2 nanomètres de diamètre, avec environ 10 paires de bases par tour et 0,34 nanomètre entre deux paires. Un noyau contient plus de 6 milliards de paires, d'où les 2 mètres. Les globules rouges, sans noyau, n'en ont pas.",
+   "note": "Forme schématique : la vraie molécule vibre et se tord sans cesse. Couleurs conventionnelles."
+  },
+  "44": {
+   "simple": "Une copie d'un petit morceau d'ADN. Elle sort du noyau pour porter une recette à l'atelier de la cellule.",
+   "standard": "Une copie de travail d'un gène, sur un seul brin. L'ARN messager quitte le noyau et porte la recette d'une protéine jusqu'aux ribosomes. Il utilise l'uracile à la place de la thymine.",
+   "approfondi": "Polymère de nucléotides à ribose, en général simple brin, qui se replie sur lui-même. L'ARN messager porte la séquence d'une protéine, mais environ 80 pour cent de l'ARN d'une cellule est de l'ARN ribosomique. Les ARN de transfert apportent les acides aminés. Un messager ne dure que quelques minutes à quelques heures.",
+   "note": "Forme schématique : la vraie molécule vibre et se tord sans cesse. Couleurs conventionnelles."
+  },
+  "45": {
+   "simple": "Une chaîne de petites briques repliée en une forme précise. Selon sa forme, c'est un outil, un câble ou un moteur.",
+   "standard": "Une chaîne d'acides aminés repliée sur elle-même. Sa forme fait sa fonction : les protéines coupent, transportent, construisent et signalent. Ton corps en fabrique des dizaines de milliers de sortes.",
+   "approfondi": "Les acides aminés sont reliés par des liaisons peptidiques ; la chaîne se replie en hélices alpha et en feuillets bêta, puis en une forme globale. Tu possèdes environ 20 000 gènes codants. Une protéine compte en général quelques centaines d'acides aminés ; la titine du muscle en a plus de 30 000.",
+   "note": "Forme schématique, pas la structure réelle de la protéine. Couleurs arbitraires."
+  },
+  "46": {
+   "simple": "Une petite bobine. L'ADN s'enroule autour pour tenir dans le noyau, comme du fil autour d'une bobine.",
+   "standard": "La bobine de l'ADN. Huit histones forment un cœur autour duquel l'ADN s'enroule, ce qui permet de ranger 2 mètres de fil dans un noyau de quelques micromètres.",
+   "approfondi": "Petites protéines riches en lysine et en arginine, dont les charges positives attirent les phosphates de l'ADN. Deux exemplaires de chacune des histones H2A, H2B, H3 et H4 forment l'octamère. Leurs queues reçoivent des marques chimiques, acétyles ou méthyles, qui ouvrent ou ferment l'accès aux gènes.",
+   "note": "Forme schématique, pas la structure réelle de la protéine. Couleurs arbitraires."
+  },
+  "47": {
+   "simple": "La protéine rouge du sang. Elle prend l'oxygène dans les poumons et le dépose partout dans le corps.",
+   "standard": "Quatre chaînes, chacune portant un hème. Elle charge l'oxygène dans les poumons et le dépose dans les tissus. Un globule rouge en contient environ 270 millions.",
+   "approfondi": "Tétramère de deux chaînes alpha et deux bêta, soit quatre hèmes et jusqu'à quatre molécules de dioxygène. La fixation est coopérative : le premier oxygène facilite les suivants. Elle est saturée à environ 97 pour cent dans le sang artériel et encore à 75 pour cent dans le sang veineux au repos.",
+   "note": "Forme schématique, pas la structure réelle de la protéine. Couleurs arbitraires."
+  },
+  "48": {
+   "simple": "Une turbine minuscule. Elle tourne comme un moulin à eau et recharge les piles de la cellule.",
+   "standard": "Une turbine moléculaire. Le flux de protons à travers la membrane la fait tourner, et chaque tour fabrique trois ATP. Elle tourne à plus de 100 tours par seconde.",
+   "approfondi": "Un rotor membranaire entraîne un axe dans une tête fixe à trois sites catalytiques. Chez les mammifères, l'anneau du rotor a 8 sous-unités : 8 protons font un tour et trois ATP, soit environ 2,7 protons par ATP. In vitro, elle dépasse 100 tours par seconde.",
+   "note": "Forme schématique, pas la structure réelle de la protéine. Couleurs arbitraires."
+  },
+  "49": {
+   "simple": "Une petite bille qui s'assemble avec d'autres en longs fils. Dans le muscle, ce sont les cordes sur lesquelles on tire.",
+   "standard": "Un filament fin fait de billes d'actine enroulées en hélice. Dans le muscle, la myosine s'y accroche et tire dessus.",
+   "approfondi": "Des monomères d'actine de 375 acides aminés polymérisent en un filament à deux brins d'environ 7 nanomètres de diamètre. Le filament est polarisé et s'allonge surtout par une extrémité. Hors du muscle, il forme le squelette qui déforme et déplace la cellule.",
+   "note": "Forme schématique, pas la structure réelle de la protéine. Couleurs arbitraires."
+  },
+  "50": {
+   "simple": "Le moteur de tes muscles. Ses petites têtes s'accrochent à un fil, tirent, lâchent et recommencent.",
+   "standard": "Le moteur du muscle : une longue tige et deux têtes. Chaque tête agrippe l'actine, bascule, lâche et recommence, en brûlant un ATP par pas.",
+   "approfondi": "La myosine du muscle s'assemble en filaments épais d'environ 300 molécules. Chaque tête hydrolyse un ATP par cycle : elle se fixe à l'actine, pivote en la tirant de quelques nanomètres, puis se détache quand un nouvel ATP arrive. Sans ATP, elle reste accrochée : c'est la rigidité cadavérique.",
+   "note": "Forme schématique, pas la structure réelle de la protéine. Couleurs arbitraires."
+  },
+  "51": {
+   "simple": "Une corde faite de trois brins tressés. Elle rend ta peau, tes tendons et tes os solides.",
+   "standard": "Trois chaînes tressées en corde. C'est la protéine la plus abondante du corps : elle donne leur résistance à la peau, aux tendons et aux os.",
+   "approfondi": "Triple hélice d'environ 300 nanomètres de long, où la glycine revient tous les trois résidus, avec beaucoup de proline et d'hydroxyproline. Cette hydroxylation exige de la vitamine C, d'où le scorbut en cas de carence. Le collagène fait 25 à 30 pour cent des protéines du corps.",
+   "note": "Forme schématique, pas la structure réelle de la protéine. Couleurs arbitraires."
+  },
+  "52": {
+   "simple": "La protéine solide de tes cheveux, de tes ongles et de la surface de ta peau.",
+   "standard": "Deux hélices enroulées l'une sur l'autre, verrouillées par des ponts de soufre. Elle rend l'épiderme étanche et forme les cheveux et les ongles.",
+   "approfondi": "Deux hélices alpha s'enroulent en superhélice, puis s'associent en filaments intermédiaires d'environ 10 nanomètres de diamètre. Le génome humain compte 54 gènes de kératine. Celles des cheveux, riches en cystéine, sont rigidifiées par de nombreux ponts disulfure. L'étanchéité de la peau doit aussi beaucoup aux lipides.",
+   "note": "Forme schématique, pas la structure réelle de la protéine. Couleurs arbitraires."
+  },
+  "53": {
+   "simple": "Une protéine en forme de Y. Ses deux bras attrapent un microbe précis pour que tes défenses le détruisent.",
+   "standard": "Une protéine en Y. Les deux bras reconnaissent un intrus précis (virus, bactérie) et s'y fixent ; le pied appelle le reste du système immunitaire.",
+   "approfondi": "Deux chaînes lourdes et deux chaînes légères, environ 150 kilodaltons pour le type le plus courant. L'extrémité des bras est variable : chaque lymphocyte B recombine au hasard des segments de gènes, ce qui rend possibles des milliards d'anticorps différents. Le pied recrute cellules immunitaires et protéines du complément.",
+   "note": "Forme schématique, pas la structure réelle de la protéine. Couleurs arbitraires."
+  },
+  "54": {
+   "simple": "Un tunnel dans la peau de la cellule. Il s'ouvre et se ferme pour laisser passer des particules chargées.",
+   "standard": "Un tunnel à travers la membrane. Il s'ouvre et se ferme pour laisser passer des ions (sodium, potassium, calcium) : c'est la base de l'influx nerveux.",
+   "approfondi": "Protéine membranaire formant un pore sélectif. Ouvert, un canal laisse passer jusqu'à cent millions d'ions par seconde, dans le sens du gradient. Les canaux à sodium et à potassium, sensibles à la tension de la membrane, produisent le potentiel d'action, à partir d'un potentiel de repos proche de moins 70 millivolts.",
+   "note": "Forme schématique, pas la structure réelle de la protéine. Couleurs arbitraires."
+  },
+  "55": {
+   "simple": "La protéine qui capte la lumière dans ton œil. Elle change de forme dès qu'un grain de lumière la touche.",
+   "standard": "Le capteur de lumière des bâtonnets. Un seul photon suffit à changer sa forme et à faire réagir le bâtonnet. Pour que tu perçoives une lueur, il en faut quelques-uns.",
+   "approfondi": "Une opsine à sept hélices membranaires qui renferme du rétinal, dérivé de la vitamine A. Un photon fait passer le rétinal de la forme 11-cis à la forme tout-trans en environ 200 femtosecondes. La rhodopsine activée déclenche une cascade amplifiée. Elle absorbe au mieux vers 500 nanomètres, dans le vert.",
+   "note": "Forme schématique, pas la structure réelle de la protéine. Couleurs arbitraires."
+  },
+  "56": {
+   "simple": "Une protéine qui aide une réaction chimique à aller beaucoup plus vite. Chaque enzyme a sa tâche, comme une clé sa serrure.",
+   "standard": "Une protéine qui accélère une réaction chimique, souvent des millions de fois. Chaque enzyme ne reconnaît que sa cible, comme une serrure sa clé.",
+   "approfondi": "Elle abaisse l'énergie d'activation en stabilisant l'état de transition dans son site actif, sans être consommée. Le site s'ajuste au substrat plutôt qu'il ne l'attend comme une serrure rigide. L'anhydrase carbonique, parmi les plus rapides, transforme jusqu'à un million de molécules par seconde.",
+   "note": "Forme schématique, pas la structure réelle de la protéine. Couleurs arbitraires."
+  },
+  "57": {
+   "simple": "La machine qui recopie un gène. Elle ouvre l'ADN et fabrique une copie en ARN, lettre après lettre.",
+   "standard": "L'enzyme qui lit un gène. Elle ouvre la double hélice et recopie un brin d'ADN en ARN, lettre par lettre.",
+   "approfondi": "Chez l'humain, l'ARN polymérase II, complexe de 12 sous-unités, transcrit les gènes des protéines. Elle lit le brin matrice et assemble l'ARN sans amorce, à raison de 20 à 70 nucléotides par seconde selon les mesures. Les plus grands gènes demandent ainsi plusieurs heures.",
+   "note": "Forme schématique, pas la structure réelle de la protéine. Couleurs arbitraires."
+  },
+  "58": {
+   "simple": "Une petite brique. Empilées par milliers, ces briques forment de longs tubes creux dans la cellule.",
+   "standard": "La brique des microtubules. Elle s'assemble par paires, puis en longues files qui forment un tube creux.",
+   "approfondi": "Une tubuline alpha et une bêta, d'environ 50 kilodaltons chacune, forment un dimère long de 8 nanomètres. Les dimères s'alignent en protofilaments ; treize protofilaments ferment le tube. La tubuline bêta hydrolyse du GTP, un cousin de l'ATP, après l'assemblage : cela rend le microtubule instable et dynamique.",
+   "note": "Forme schématique, pas la structure réelle de la protéine. Couleurs arbitraires."
+  },
+  "59": {
+   "simple": "Une porte dans la paroi du noyau. Elle contrôle ce qui entre et ce qui sort.",
+   "standard": "Une porte dans l'enveloppe du noyau. L'ARN messager sort par là ; les protéines utiles au noyau y entrent. Chaque noyau en compte des milliers.",
+   "approfondi": "Un des plus gros assemblages de la cellule : environ 30 protéines différentes, répétées pour totaliser un millier de sous-unités et plus de 100 mégadaltons, avec une symétrie d'ordre huit. Les petites molécules diffusent librement ; au-delà d'environ 40 kilodaltons, il faut un transporteur. Un noyau en porte 2 000 à 5 000.",
+   "note": "Forme schématique, pas la structure réelle de la protéine. Couleurs arbitraires."
+  },
+  "60": {
+   "simple": "La peau de la cellule : un film gras très fin qui sépare le dedans du dehors et surveille les passages.",
+   "standard": "Une double couche de phospholipides, épaisse de 5 nanomètres, qui sépare l'intérieur de l'extérieur. Des protéines y flottent et contrôlent ce qui entre et sort.",
+   "approfondi": "Modèle de la mosaïque fluide : lipides et protéines diffusent dans le plan de la bicouche. Les protéines font environ la moitié de sa masse. Perméable aux gaz, elle arrête les ions : le potentiel de repos, 70 millivolts sur 5 nanomètres, représente un champ de plus de 10 millions de volts par mètre.",
+   "note": "Effectifs réduits et espace vidé pour la lisibilité : l'intérieur réel d'une cellule est bien plus dense."
+  },
+  "61": {
+   "simple": "De l'ADN enroulé autour d'une petite bobine de protéines. C'est la première étape pour ranger le long fil.",
+   "standard": "L'ADN fait presque deux tours autour d'un cœur de huit histones, comme du fil sur une bobine. C'est le premier niveau de rangement du génome.",
+   "approfondi": "147 paires de bases font 1,65 tour autour de l'octamère d'histones, formant une particule d'environ 10 nanomètres. Un segment d'ADN de liaison le sépare du suivant : un nucléosome toutes les 200 paires environ, soit de l'ordre de 30 millions par noyau.",
+   "note": "Effectifs réduits et espace vidé pour la lisibilité : l'intérieur réel d'une cellule est bien plus dense."
+  },
+  "62": {
+   "simple": "L'ADN enroulé sur ses bobines, comme un collier de perles replié. Serré, on ne peut pas le lire ; relâché, oui.",
+   "standard": "L'ADN enroulé sur ses nucléosomes, comme des perles sur un fil, puis replié sur lui-même. Selon qu'elle est serrée ou relâchée, les gènes sont éteints ou lisibles.",
+   "approfondi": "L'euchromatine, relâchée, porte les gènes actifs ; l'hétérochromatine, compacte, les gènes réduits au silence. La fibre régulière de 30 nanomètres des manuels n'est guère retrouvée dans les cellules : la microscopie montre plutôt des chaînes désordonnées de 5 à 24 nanomètres. La question reste discutée.",
+   "note": "Effectifs réduits et espace vidé pour la lisibilité : l'intérieur réel d'une cellule est bien plus dense."
+  },
+  "63": {
+   "simple": "L'atelier qui fabrique les protéines. Il lit la recette et accroche les briques une par une, dans le bon ordre.",
+   "standard": "L'atelier d'assemblage des protéines. Il lit l'ARN messager trois lettres à la fois et accroche les acides aminés dans l'ordre, environ 5 par seconde.",
+   "approfondi": "Deux sous-unités faites de 4 ARN ribosomiques et d'environ 80 protéines, pour 25 à 30 nanomètres de diamètre. C'est l'ARN, et non une protéine, qui catalyse la liaison peptidique. Chaque triplet de bases, ou codon, désigne un acide aminé apporté par un ARN de transfert. Une cellule en contient des millions.",
+   "note": "Effectifs réduits et espace vidé pour la lisibilité : l'intérieur réel d'une cellule est bien plus dense."
+  },
+  "64": {
+   "simple": "Une zone sombre dans le noyau. C'est l'usine où sont fabriqués les ateliers à protéines, les ribosomes.",
+   "standard": "La zone dense du noyau où se fabriquent les ribosomes : l'ARN ribosomique y est copié puis assemblé avec des protéines.",
+   "approfondi": "Compartiment sans membrane, formé par séparation de phase autour des gènes d'ARN ribosomique. Ces gènes existent en plusieurs centaines de copies, sur cinq paires de chromosomes. L'ARN polymérase I y produit un long précurseur, découpé ensuite en trois ARN ribosomiques.",
+   "note": "Effectifs réduits et espace vidé pour la lisibilité : l'intérieur réel d'une cellule est bien plus dense."
+  },
+  "65": {
+   "simple": "Le coffre-fort de la cellule. Il garde l'ADN, le grand livre de recettes pour fabriquer ton corps.",
+   "standard": "La bibliothèque de la cellule. Il abrite l'ADN : 46 chromosomes, soit deux exemplaires d'un texte d'environ 3 milliards de paires de bases. Les gènes y sont recopiés en ARN avant de partir vers le cytoplasme.",
+   "approfondi": "Délimité par une double membrane percée de pores, il mesure 5 à 10 micromètres. Ses 46 chromosomes totalisent plus de 6 milliards de paires de bases, soit 2 mètres d'ADN. Environ 20 000 gènes codent des protéines ; ils occupent moins de 2 pour cent du génome.",
+   "note": "Effectifs réduits et espace vidé pour la lisibilité : l'intérieur réel d'une cellule est bien plus dense."
+  },
+  "66": {
+   "simple": "La centrale électrique de la cellule. Elle utilise l'oxygène pour transformer ta nourriture en énergie.",
+   "standard": "La centrale énergétique. Elle brûle le sucre et les graisses avec l'oxygène pour recharger l'ATP. Elle possède son propre petit ADN, hérité de ta mère.",
+   "approfondi": "Sa membrane interne, repliée en crêtes, porte la chaîne respiratoire : celle-ci pompe des protons, dont le retour fait tourner l'ATP synthase. Descendante d'une bactérie, elle garde un ADN circulaire de 16 569 paires de bases et 37 gènes. Une cellule en contient des centaines à des milliers.",
+   "note": "Effectifs réduits et espace vidé pour la lisibilité : l'intérieur réel d'une cellule est bien plus dense."
+  },
+  "67": {
+   "simple": "Un labyrinthe de membranes autour du noyau. On y fabrique des protéines et des graisses.",
+   "standard": "Un réseau de membranes repliées, collé au noyau. Sa partie rugueuse, couverte de ribosomes, fabrique les protéines destinées à sortir de la cellule ; sa partie lisse fabrique les lipides.",
+   "approfondi": "Il forme plus de la moitié des membranes d'une cellule typique, en continuité avec l'enveloppe du noyau. Environ un tiers des protéines y sont repliées, contrôlées et dotées de sucres ou de ponts disulfure. Sa partie lisse stocke aussi le calcium.",
+   "note": "Effectifs réduits et espace vidé pour la lisibilité : l'intérieur réel d'une cellule est bien plus dense."
+  },
+  "68": {
+   "simple": "Une petite bulle qui transporte des colis d'un endroit à l'autre de la cellule, ou vers l'extérieur.",
+   "standard": "Une bulle de membrane qui transporte des protéines d'un compartiment à l'autre, ou les libère à l'extérieur de la cellule.",
+   "approfondi": "Sphère de membrane de 50 à 100 nanomètres en général. Un manteau de protéines, comme la clathrine, la fait bourgeonner ; des moteurs la tirent le long des microtubules ; les protéines SNARE la font fusionner avec la bonne membrane cible.",
+   "note": "Effectifs réduits et espace vidé pour la lisibilité : l'intérieur réel d'une cellule est bien plus dense."
+  },
+  "69": {
+   "simple": "L'estomac et la poubelle de la cellule. Il digère ce qui est usé pour en récupérer les morceaux.",
+   "standard": "L'estomac de la cellule : un sac acide rempli d'enzymes qui découpent les déchets et les composants usés pour les recycler.",
+   "approfondi": "Une pompe à protons maintient son pH entre 4,5 et 5. Il contient une cinquantaine d'enzymes, les hydrolases acides, inactives au pH neutre du cytoplasme : une sécurité en cas de fuite. Il digère aussi les organites usés, par autophagie. Un défaut d'une seule enzyme cause une maladie de surcharge.",
+   "note": "Effectifs réduits et espace vidé pour la lisibilité : l'intérieur réel d'une cellule est bien plus dense."
+  },
+  "70": {
+   "simple": "Un tout petit sac rempli de messagers chimiques. Quand le signal arrive, il s'ouvre et les lâche vers le neurone voisin.",
+   "standard": "Un petit sac de glutamate prêt à l'emploi. Quand le signal électrique arrive au bout de l'axone, elle fusionne avec la membrane et libère son contenu vers le neurone suivant.",
+   "approfondi": "Sphère d'environ 40 nanomètres contenant quelques milliers de molécules de neurotransmetteur, 2 000 à 8 000 selon les estimations. L'entrée de calcium dans la terminaison déclenche sa fusion en moins d'une milliseconde, grâce aux protéines SNARE. D'autres synapses utilisent le GABA ou d'autres messagers que le glutamate.",
+   "note": "Effectifs réduits et espace vidé pour la lisibilité : l'intérieur réel d'une cellule est bien plus dense."
+  },
+  "71": {
+   "simple": "Le centre de tri postal de la cellule. Il finit les protéines, les étiquette et les expédie.",
+   "standard": "Le centre de tri. Les protéines venues du réticulum y sont retouchées, étiquetées, puis emballées dans des vésicules vers leur destination.",
+   "approfondi": "Une pile de quelques saccules aplatis, souvent 4 à 8, traversée de la face d'entrée à la face de sortie. Des enzymes y remanient les chaînes de sucres des protéines. Une étiquette, le mannose 6-phosphate, envoie par exemple les enzymes vers les lysosomes.",
+   "note": "Effectifs réduits et espace vidé pour la lisibilité : l'intérieur réel d'une cellule est bien plus dense."
+  },
+  "72": {
+   "simple": "Un long tube creux. Il sert de poutre à la cellule, et de rail pour transporter ses colis.",
+   "standard": "Un tube creux fait de tubuline. Il sert de charpente à la cellule et de rail : des moteurs moléculaires y transportent vésicules et organites.",
+   "approfondi": "Tube de 25 nanomètres de diamètre fait de 13 protofilaments de tubuline. Il s'allonge et se raccourcit sans cesse : c'est l'instabilité dynamique. La kinésine y avance par pas de 8 nanomètres, jusqu'à un micromètre par seconde environ. Les microtubules forment aussi le fuseau qui sépare les chromosomes.",
+   "note": "Effectifs réduits et espace vidé pour la lisibilité : l'intérieur réel d'une cellule est bien plus dense."
+  },
+  "73": {
+   "simple": "La cellule qui transmet les messages dans ton cerveau. Ses branches reçoivent les signaux, son long fil les envoie plus loin.",
+   "standard": "La cellule qui pense. Ses dendrites (les branches) reçoivent les signaux, son long axone les envoie plus loin. Ton cerveau en compte environ 86 milliards, reliés par plus de 100 000 milliards de synapses.",
+   "approfondi": "Au repos, sa membrane est à environ moins 70 millivolts. Si la somme des signaux reçus dépasse un seuil, un potentiel d'action d'une milliseconde environ parcourt l'axone. Un neurone reçoit des milliers de synapses, plus de 100 000 pour une cellule de Purkinje. Ton cerveau compte 86 milliards de neurones.",
+   "note": "Intérieur réel bien plus dense ; organites en nombre réduit. Couleurs arbitraires."
+  },
+  "74": {
+   "simple": "Une cellule en forme d'étoile qui prend soin des neurones : elle les nourrit et nettoie autour d'eux.",
+   "standard": "Cellule en étoile qui entoure les neurones. Elle les nourrit, nettoie les messagers chimiques après usage et participe à la barrière entre le sang et le cerveau.",
+   "approfondi": "Cellule gliale dont les prolongements enveloppent synapses et capillaires. Elle recapture le glutamate et le potassium, stocke du glycogène et entretient la barrière hémato-encéphalique. Le cerveau compte à peu près autant de cellules gliales que de neurones, et non dix fois plus comme on l'a longtemps écrit.",
+   "note": "Intérieur réel bien plus dense ; organites en nombre réduit. Couleurs arbitraires."
+  },
+  "75": {
+   "simple": "Une cellule qui vit enfermée dans l'os. Elle sent quand l'os est trop sollicité et appelle les réparateurs.",
+   "standard": "Une cellule emmurée dans l'os qu'elle a construit. Ses fins prolongements la relient à ses voisines : ensemble, elles sentent les contraintes et commandent la réparation de l'os.",
+   "approfondi": "Ancien ostéoblaste enfermé dans une logette de la matrice minéralisée. Les ostéocytes forment plus de 90 pour cent des cellules de l'os et vivent des années, voire des décennies. Reliés par de fins canalicules, ils détectent les contraintes mécaniques et règlent l'activité des ostéoblastes et des ostéoclastes.",
+   "note": "Intérieur réel bien plus dense ; organites en nombre réduit. Couleurs arbitraires."
+  },
+  "76": {
+   "simple": "Un petit disque rouge qui transporte l'oxygène. Il fait le tour de ton corps en une minute environ.",
+   "standard": "Un disque creusé au centre, sans noyau ni organites : tout l'espace sert à l'hémoglobine. Il vit 120 jours et fait le tour du corps en une minute environ. Tu en as près de 25 000 milliards.",
+   "approfondi": "Disque biconcave de 7 à 8 micromètres, très déformable. Sans mitochondries, il tire son énergie de la seule glycolyse. La moelle osseuse en produit environ 2 millions par seconde, sous le contrôle de l'érythropoïétine venue des reins ; la rate retire les plus vieux après 120 jours.",
+   "note": "Intérieur réel bien plus dense ; organites en nombre réduit. Couleurs arbitraires."
+  },
+  "77": {
+   "simple": "Un globule blanc, soldat de tes défenses. Il reconnaît les microbes et se souvient d'eux pour la fois suivante.",
+   "standard": "Un globule blanc. Son gros noyau occupe presque toute la cellule. Les lymphocytes B fabriquent les anticorps ; les T reconnaissent et détruisent les cellules infectées.",
+   "approfondi": "Cellule de 7 à 10 micromètres, 20 à 40 pour cent des globules blancs du sang. Chaque lymphocyte porte un récepteur unique ; celui qui reconnaît un antigène se multiplie : c'est la sélection clonale. Les B deviennent des plasmocytes sécréteurs d'anticorps, les T mûrissent dans le thymus. Des cellules mémoire persistent des années.",
+   "note": "Intérieur réel bien plus dense ; organites en nombre réduit. Couleurs arbitraires."
+  },
+  "78": {
+   "simple": "Une cellule très longue et fine, comme un fil. Elle se raccourcit pour faire bouger ton corps.",
+   "standard": "Une cellule géante, longue de plusieurs centimètres, à plusieurs noyaux. Ses stries sont des rangées d'actine et de myosine qui coulissent les unes sur les autres pour raccourcir le muscle.",
+   "approfondi": "Née de la fusion de nombreuses cellules, elle mesure 10 à 100 micromètres de diamètre. Ses myofibrilles alignent des sarcomères d'environ 2 micromètres. Le signal nerveux fait libérer du calcium par le réticulum sarcoplasmique ; le calcium démasque l'actine, et la myosine peut tirer.",
+   "note": "Intérieur réel bien plus dense ; organites en nombre réduit. Couleurs arbitraires."
+  },
+  "79": {
+   "simple": "La cellule du cœur. Elle se contracte à chaque battement, toute ta vie, sans jamais s'arrêter.",
+   "standard": "La cellule du muscle cardiaque. Elle se contracte sans jamais se reposer, environ 3 milliards de fois dans une vie, et un tiers de son volume est fait de mitochondries.",
+   "approfondi": "Cellule ramifiée d'environ 100 micromètres, à un ou deux noyaux, reliée à ses voisines par des disques intercalaires qui transmettent force et signal électrique. Ses mitochondries occupent près d'un tiers du volume. Elle se renouvelle très peu : environ 1 pour cent par an à 25 ans, moins de 0,5 à 75 ans.",
+   "note": "Intérieur réel bien plus dense ; organites en nombre réduit. Couleurs arbitraires."
+  },
+  "80": {
+   "simple": "La cellule du foie. Elle met le sucre en réserve et rend inoffensifs les produits dangereux.",
+   "standard": "L'ouvrière du foie. Elle stocke le sucre, fabrique la bile et les protéines du sang, et neutralise l'alcool, les médicaments et les toxines.",
+   "approfondi": "Les hépatocytes occupent environ 80 pour cent du volume du foie. Ils stockent une centaine de grammes de glycogène, produisent 10 à 15 grammes d'albumine par jour et la plupart des facteurs de coagulation. Leurs enzymes, dont les cytochromes P450, transforment médicaments et toxines pour qu'ils soient éliminés.",
+   "note": "Intérieur réel bien plus dense ; organites en nombre réduit. Couleurs arbitraires."
+  },
+  "81": {
+   "simple": "La cellule de la surface de ta peau. Elle naît en profondeur, monte, durcit et forme un bouclier.",
+   "standard": "La cellule de l'épiderme. Née en profondeur, elle monte vers la surface en se remplissant de kératine, s'aplatit, meurt et forme la couche protectrice de la peau.",
+   "approfondi": "Les kératinocytes font environ 90 pour cent des cellules de l'épiderme. Nés de cellules souches de la couche basale, ils mettent environ quatre semaines à atteindre la surface. Ils perdent alors leur noyau et deviennent des cornéocytes, cimentés par des lipides qui assurent l'étanchéité.",
+   "note": "Intérieur réel bien plus dense ; organites en nombre réduit. Couleurs arbitraires."
+  },
+  "82": {
+   "simple": "Une cellule très plate qui tapisse les petits sacs d'air du poumon. L'oxygène la traverse pour passer dans le sang.",
+   "standard": "Une cellule très plate qui tapisse l'alvéole. Elle est si mince que l'oxygène la traverse en une fraction de seconde pour rejoindre le sang.",
+   "approfondi": "Les pneumocytes de type I, très étalés, couvrent l'essentiel de la surface de l'alvéole. La barrière entre air et sang y mesure souvent moins d'un micromètre. Le sang reste environ 0,75 seconde dans le capillaire et se charge en oxygène en 0,25 seconde. Les pneumocytes de type II sécrètent le surfactant.",
+   "note": "Intérieur réel bien plus dense ; organites en nombre réduit. Couleurs arbitraires."
+  },
+  "83": {
+   "simple": "Une cellule du rein qui trie : elle reprend l'eau, le sel et le sucre utiles et les rend au sang.",
+   "standard": "Elle récupère dans l'urine en formation l'eau, le sel et le sucre utiles et les rend au sang. Ce pompage coûte cher : elle est bourrée de mitochondries.",
+   "approfondi": "Dans le tubule proximal, sa bordure en brosse réabsorbe environ les deux tiers de l'eau et du sodium filtrés, et la totalité du glucose tant que la glycémie reste sous 1,8 gramme par litre environ. Le moteur est la pompe sodium-potassium, grande consommatrice d'ATP.",
+   "note": "Intérieur réel bien plus dense ; organites en nombre réduit. Couleurs arbitraires."
+  },
+  "84": {
+   "simple": "Une cellule de la paroi de l'estomac. Certaines fabriquent l'acide, d'autres le mucus qui protège la paroi.",
+   "standard": "Selon son type, elle sécrète l'acide chlorhydrique, les enzymes digestives ou le mucus qui protège la paroi de l'estomac contre son propre acide.",
+   "approfondi": "La cellule pariétale sécrète l'acide grâce à une pompe qui échange protons et potassium : elle concentre les protons environ un million de fois par rapport au sang. La cellule principale sécrète le pepsinogène, que l'acide active en pepsine. Les médicaments de type oméprazole bloquent cette pompe.",
+   "note": "Intérieur réel bien plus dense ; organites en nombre réduit. Couleurs arbitraires."
+  },
+  "85": {
+   "simple": "La cellule de l'intestin qui absorbe ta nourriture. Sa surface est couverte de poils minuscules, comme une brosse.",
+   "standard": "La cellule qui absorbe ta nourriture. Sa face tournée vers l'intestin porte des milliers de microvillosités, une bordure en brosse qui multiplie sa surface d'échange.",
+   "approfondi": "Ses microvillosités, longues d'un micromètre environ, multiplient sa surface par 13 environ. Des transporteurs y font entrer glucose et acides aminés avec du sodium. Exposé à l'abrasion, l'entérocyte est remplacé tous les 3 à 5 jours par des cellules nées au fond des cryptes.",
+   "note": "Intérieur réel bien plus dense ; organites en nombre réduit. Couleurs arbitraires."
+  },
+  "86": {
+   "simple": "La cellule de l'œil qui te permet de voir dans la pénombre, en noir et blanc.",
+   "standard": "Le photorécepteur de la vision nocturne. Son segment externe est une pile de disques couverts de rhodopsine, capable de détecter un seul photon. Ta rétine en compte environ 100 millions.",
+   "approfondi": "Son segment externe empile des centaines de disques chargés de rhodopsine. Dans le noir, il libère du glutamate en continu ; la lumière ferme ses canaux et réduit cette libération. Saturés en plein jour, les bâtonnets sont environ 100 millions par rétine, entre 90 et 120 selon les comptages, et absents du centre de la fovéa.",
+   "note": "Intérieur réel bien plus dense ; organites en nombre réduit. Couleurs arbitraires."
+  },
+  "87": {
+   "simple": "Un microbe utile qui vit dans ton intestin. Il t'aide à digérer et fabrique des vitamines.",
+   "standard": "Une habitante de ton microbiote, bien plus petite que tes cellules et sans noyau : son ADN flotte librement. Tu en héberges environ 38 000 milliards, qui digèrent les fibres et fabriquent des vitamines.",
+   "approfondi": "Procaryote d'un ou deux micromètres, des centaines de fois moins volumineux qu'une cellule humaine typique. Tes 38 000 milliards de bactéries, surtout dans le côlon, ne pèsent qu'environ 200 grammes : à peu près autant de bactéries que de cellules humaines, et non dix fois plus. Elles fermentent les fibres en acides gras à chaîne courte.",
+   "note": "Intérieur réel bien plus dense ; organites en nombre réduit. Couleurs arbitraires."
+  },
+  "88": {
+   "simple": "Le plus fin des tuyaux du sang. Les globules rouges y passent un par un pour livrer l'oxygène.",
+   "standard": "Le plus fin des vaisseaux : les globules rouges y passent en file indienne, en se déformant. C'est ici que l'oxygène et le sucre quittent le sang pour les cellules.",
+   "approfondi": "Tube de 5 à 10 micromètres dont la paroi n'a qu'une couche de cellules endothéliales. Le sang y ralentit à moins d'un millimètre par seconde et y reste une à deux secondes : assez pour que les gaz diffusent. Les capillaires forment l'essentiel de la longueur des vaisseaux.",
+   "note": "Fausses couleurs, comme en astronomie : elles distinguent les structures, pas leur teinte réelle."
+  },
+  "89": {
+   "simple": "Un tuyau où circule ton sang. Les artères partent du cœur, les veines y reviennent.",
+   "standard": "Une artère ou une veine, vue de l'intérieur. Mis bout à bout, tes vaisseaux feraient sans doute 10 000 à 20 000 kilomètres, et non les 100 000 souvent cités. Le sang y charrie globules rouges, globules blancs, sucre, hormones et anticorps.",
+   "approfondi": "Une artère a trois tuniques, dont une couche musculaire qui règle son diamètre ; une veine, plus mince, a des valvules. L'aorte mesure environ 2,5 centimètres de diamètre. Les veines contiennent près des deux tiers de tes 5 litres de sang. La longueur totale, dominée par les capillaires, serait de 10 000 à 20 000 kilomètres.",
+   "note": "Fausses couleurs, comme en astronomie : elles distinguent les structures, pas leur teinte réelle."
+  },
+  "90": {
+   "simple": "L'endroit où deux neurones se parlent. Le premier lâche des messagers chimiques, le second les capte.",
+   "standard": "Le point de contact entre deux neurones. Le signal arrive par le bouton du haut, qui libère son glutamate dans une fente de 20 nanomètres. En bas, les canaux du neurone suivant s'ouvrent et le signal repart. Tu en as plus de 100 000 milliards.",
+   "approfondi": "Le potentiel d'action ouvre des canaux à calcium ; les vésicules fusionnent et le glutamate traverse la fente de 20 nanomètres. Il ouvre les récepteurs d'en face, le tout en une milliseconde environ. La force d'une synapse varie avec l'usage : c'est la base de l'apprentissage. Leur nombre est estimé entre 100 000 et 500 000 milliards.",
+   "note": "Intérieur réel bien plus dense ; organites en nombre réduit. Couleurs arbitraires."
+  },
+  "91": {
+   "simple": "L'écorce plissée du cerveau. C'est là que tu vois, parles, te souviens et décides.",
+   "standard": "La couche plissée à la surface du cerveau, épaisse de 2 à 4 millimètres : la matière grise. Elle traite perception, langage, mémoire et décision. Les fils sont les liaisons entre neurones : cyan, elles excitent ; magenta, elles freinent. Au bout de chaque fil, une synapse.",
+   "approfondi": "Organisé en six couches, il contient environ 16 milliards de neurones, dont 80 pour cent excitateurs, à glutamate, et 20 pour cent inhibiteurs, à GABA. Déplié, il couvrirait environ 2 000 centimètres carrés : les deux tiers sont cachés dans les sillons.",
+   "note": "Fausses couleurs. Les fils cyan et magenta sont un schéma : les vraies connexions sont bien plus nombreuses."
+  },
+  "92": {
+   "simple": "Le cervelet règle tes gestes et ton équilibre. Petit, il contient pourtant plus de la moitié de tes neurones.",
+   "standard": "Le cervelet règle la précision des gestes et l'équilibre. Il ne pèse qu'un dixième du cerveau mais contient plus de la moitié de ses neurones. Fils cyan : connexions excitatrices ; magenta : inhibitrices.",
+   "approfondi": "Il contient environ 69 des 86 milliards de neurones du cerveau, soit 80 pour cent, surtout de minuscules cellules granulaires. Leurs fibres parallèles forment plus de 100 000 synapses sur chaque cellule de Purkinje. Celle-ci, inhibitrice, est la seule sortie du cortex du cervelet.",
+   "note": "Fausses couleurs. Les fils cyan et magenta sont un schéma : les vraies connexions sont bien plus nombreuses."
+  },
+  "93": {
+   "simple": "Le long câble d'un neurone, entouré d'une gaine grasse. Grâce à elle, le message file très vite.",
+   "standard": "Le câble de sortie d'un neurone, gainé de myéline, un isolant gras enroulé en couches. Le signal saute d'un nœud à l'autre et peut atteindre 100 mètres par seconde.",
+   "approfondi": "La myéline, enroulée par les oligodendrocytes dans le cerveau et par les cellules de Schwann dans les nerfs, laisse à nu les nœuds de Ranvier, espacés d'un millimètre environ. Le potentiel d'action ne se régénère qu'à ces nœuds : jusqu'à 100 mètres par seconde, contre environ 1 sans myéline.",
+   "note": "Intérieur réel bien plus dense ; organites en nombre réduit. Couleurs arbitraires."
+  },
+  "94": {
+   "simple": "Les câbles du cerveau. Des millions de fils y relient les différentes régions pour qu'elles travaillent ensemble.",
+   "standard": "Sous le cortex, des faisceaux de millions d'axones relient les régions du cerveau entre elles. Leur gaine de myéline, grasse, leur donne cette couleur claire.",
+   "approfondi": "Elle occupe près de la moitié du volume des hémisphères. Mises bout à bout, ses fibres myélinisées mesureraient 150 000 à 180 000 kilomètres à 20 ans, et environ 45 pour cent de moins à 80 ans. Le corps calleux, qui relie les deux hémisphères, compte à lui seul environ 200 millions d'axones.",
+   "note": "Fausses couleurs, comme en astronomie : elles distinguent les structures, pas leur teinte réelle."
+  },
+  "95": {
+   "simple": "Un minuscule sac d'air au bout des bronches. L'oxygène y passe dans le sang, le gaz carbonique en sort.",
+   "standard": "Un petit sac d'air entouré de capillaires. L'oxygène passe dans le sang, le CO₂ fait le chemin inverse. Tes poumons en comptent environ 480 millions, soit la surface d'un demi-terrain de tennis.",
+   "approfondi": "Sac d'environ 0,2 millimètre de diamètre. Les gaz diffusent selon leur pression partielle : celle de l'oxygène vaut environ 100 millimètres de mercure dans l'alvéole contre 40 dans le sang qui arrive. Les 480 millions d'alvéoles offrent environ 130 mètres carrés. Le surfactant les empêche de s'affaisser.",
+   "note": "Fausses couleurs, comme en astronomie : elles distinguent les structures, pas leur teinte réelle."
+  },
+  "96": {
+   "simple": "Une petite unité du foie. Le sang venu de l'intestin y passe lentement entre les cellules, qui le nettoient.",
+   "standard": "L'unité du foie : des travées d'hépatocytes disposées en rayons autour d'une veine centrale. Le sang venu de l'intestin les longe et s'y fait filtrer.",
+   "approfondi": "Prisme à six côtés d'environ 1 millimètre de large. À chaque angle, une branche de la veine porte, une de l'artère hépatique et un canal biliaire. Le sang, aux trois quarts veineux, gagne la veine centrale par les sinusoïdes ; la bile coule en sens inverse.",
+   "note": "Fausses couleurs, comme en astronomie : elles distinguent les structures, pas leur teinte réelle."
+  },
+  "97": {
+   "simple": "Un minuscule filtre du rein. Il nettoie le sang, garde ce qui est utile et fait l'urine du reste.",
+   "standard": "Le filtre du rein. Le sang est filtré dans un peloton de capillaires (le glomérule), puis un long tubule en épingle récupère l'eau et les sels utiles. Chaque rein en contient environ un million.",
+   "approfondi": "Le glomérule filtre environ 20 pour cent du plasma qui le traverse, en retenant cellules et grosses protéines. Le tubule réabsorbe ensuite plus de 99 pour cent de l'eau ; l'anse de Henle crée le gradient de sel qui permet de concentrer l'urine. Leur nombre, un million par rein en moyenne, varie beaucoup d'une personne à l'autre.",
+   "note": "Fausses couleurs, comme en astronomie : elles distinguent les structures, pas leur teinte réelle."
+  },
+  "98": {
+   "simple": "Un paquet de fibres musculaires, comme une poignée de spaghettis. Elles se raccourcissent ensemble pour tirer sur l'os.",
+   "standard": "Un paquet de fibres musculaires parallèles, enveloppé de tissu conjonctif. Quand le nerf commande, toutes les fibres se raccourcissent ensemble. Les muscles représentent 30 à 40 pour cent de ton poids.",
+   "approfondi": "Un motoneurone et les fibres qu'il commande forment une unité motrice : d'une dizaine de fibres pour les muscles de l'œil à plus d'un millier pour ceux de la jambe. La force se règle par le nombre d'unités recrutées. Les muscles font environ 38 pour cent du poids d'un homme et 31 pour cent de celui d'une femme.",
+   "note": "Fausses couleurs, comme en astronomie : elles distinguent les structures, pas leur teinte réelle."
+  },
+  "99": {
+   "simple": "Le muscle du cœur. Ses cellules se passent le signal de l'une à l'autre et battent en rythme.",
+   "standard": "Des cardiomyocytes soudés bout à bout en un réseau ramifié. Le signal électrique passe de cellule en cellule, les oreillettes se contractent, puis les ventricules, environ 100 000 fois par jour.",
+   "approfondi": "Le battement naît dans le nœud sinusal, sans ordre du cerveau. Le signal gagne les oreillettes, est retardé d'environ un dixième de seconde au nœud auriculo-ventriculaire, puis parcourt les ventricules. Le potentiel d'action dure 200 à 300 millisecondes : le cœur ne peut pas se tétaniser.",
+   "note": "Fausses couleurs, comme en astronomie : elles distinguent les structures, pas leur teinte réelle."
+  },
+  "100": {
+   "simple": "Un petit cylindre d'os fait d'anneaux, comme un tronc d'arbre. Au centre passent les vaisseaux qui nourrissent l'os.",
+   "standard": "L'unité de l'os compact : des lamelles concentriques autour d'un canal où passent vaisseaux et nerfs. L'os est vivant : sans cesse détruit et rebâti, ton squelette se renouvelle en une dizaine d'années en moyenne, l'os compact plus lentement que l'os spongieux.",
+   "approfondi": "Aussi appelé système de Havers : un cylindre d'environ 0,2 millimètre de diamètre, parallèle à l'axe de l'os. Les ostéoclastes creusent un tunnel, les ostéoblastes le comblent de lamelles. L'os compact forme environ 80 pour cent de la masse du squelette, dont un dixième environ est renouvelé chaque année.",
+   "note": "Fausses couleurs, comme en astronomie : elles distinguent les structures, pas leur teinte réelle."
+  },
+  "101": {
+   "simple": "L'enveloppe de ton corps. Dessus, une couche fine et imperméable ; dessous, une couche souple et solide.",
+   "standard": "En haut, l'épiderme : des kératinocytes qui montent et s'aplatissent en une couche morte et étanche. En dessous, le derme, riche en collagène et en capillaires. La peau est ton plus grand organe : près de 2 mètres carrés.",
+   "approfondi": "L'épiderme, épais d'environ 0,1 millimètre hors paumes et plantes, n'a pas de vaisseaux : il est nourri par le derme et se renouvelle en quatre semaines environ. Ses mélanocytes protègent des ultraviolets, qui lui servent aussi à produire la vitamine D. Le derme mesure 1 à 4 millimètres.",
+   "note": "Fausses couleurs, comme en astronomie : elles distinguent les structures, pas leur teinte réelle."
+  },
+  "102": {
+   "simple": "Un minuscule doigt sur la paroi de l'intestin. Il attrape les aliments digérés et les passe au sang.",
+   "standard": "Un doigt minuscule de la paroi de l'intestin. Couvert d'entérocytes, il absorbe les nutriments et les passe au capillaire qui court en son centre. Autour flottent les bactéries du microbiote.",
+   "approfondi": "Haute de 0,5 à 1 millimètre. Sucres et acides aminés gagnent ses capillaires, puis le foie par la veine porte ; les graisses passent par un vaisseau lymphatique central. Les villosités multiplient la surface de l'intestin par 6,5 environ. Leurs cellules naissent dans les cryptes et sont remplacées en quelques jours.",
+   "note": "Fausses couleurs, comme en astronomie : elles distinguent les structures, pas leur teinte réelle."
+  },
+  "103": {
+   "simple": "L'écran au fond de ton œil. Il capte la lumière et envoie l'image au cerveau.",
+   "standard": "L'écran au fond de l'œil, épais d'un quart de millimètre. Les photorécepteurs captent la lumière, puis deux couches de neurones trient le signal avant de l'envoyer au cerveau par le nerf optique.",
+   "approfondi": "La lumière traverse les couches de neurones avant d'atteindre les photorécepteurs, tournés vers le fond. Environ 100 millions de bâtonnets et 5 millions de cônes convergent vers un million de cellules ganglionnaires, dont les axones forment le nerf optique. La fovéa, au centre, ne contient que des cônes.",
+   "note": "Fausses couleurs, comme en astronomie : elles distinguent les structures, pas leur teinte réelle."
+  },
+  "104": {
+   "simple": "Un petit puits dans la paroi de l'estomac. Il produit le suc acide qui commence à digérer ton repas.",
+   "standard": "Un puits creusé dans la paroi de l'estomac. Ses cellules y déversent acide et enzymes : environ deux litres de suc gastrique par jour.",
+   "approfondi": "Elle réunit des cellules à mucus, des cellules pariétales qui sécrètent l'acide chlorhydrique et le facteur intrinsèque nécessaire à la vitamine B12, et des cellules principales à pepsinogène. La gastrine, l'histamine et le nerf vague stimulent la sécrétion. La pepsine n'est active qu'à pH inférieur à 4 environ.",
+   "note": "Fausses couleurs, comme en astronomie : elles distinguent les structures, pas leur teinte réelle."
+  },
+  "105": {
+   "simple": "Le chef d'orchestre de ton corps. Il pèse un peu moins d'un kilo et demi et travaille même quand tu dors.",
+   "standard": "1,4 kilogramme, 86 milliards de neurones, 20 pour cent de l'énergie du corps. En surface, le cortex plissé ; dessous, la substance blanche qui câble le tout ; à l'arrière, le cervelet. Faisceaux colorés : rouge entre les deux hémisphères, vert d'avant en arrière, bleu vers la moelle.",
+   "approfondi": "Il fait 2 pour cent de ta masse mais consomme 20 pour cent de ton énergie au repos, soit environ 20 watts, surtout pour rétablir les gradients d'ions des neurones. Sur 86 milliards de neurones, 16 sont dans le cortex cérébral et 69 dans le cervelet. Il reçoit environ 750 millilitres de sang par minute.",
+   "note": "Fausses couleurs. Les faisceaux rouge, vert et bleu sont un code de direction, pas une teinte réelle."
+  },
+  "106": {
+   "simple": "Une pompe grosse comme ton poing. Elle pousse le sang dans tout ton corps, jour et nuit.",
+   "standard": "Une pompe musculaire de la taille du poing. Quatre cavités, 5 litres de sang par minute au repos, environ 100 000 battements par jour sans une seule pause.",
+   "approfondi": "Deux pompes en série : le cœur droit envoie le sang aux poumons sous environ 25 millimètres de mercure, le gauche au reste du corps sous 120. Chaque battement éjecte environ 70 millilitres, soit 5 litres par minute à 70 battements. À l'effort, le débit peut dépasser 20 litres par minute.",
+   "note": "Fausses couleurs, comme en astronomie : elles distinguent les structures, pas leur teinte réelle."
+  },
+  "107": {
+   "simple": "Un arbre creux qui se ramifie jusqu'à des millions de petits sacs. C'est là que l'air donne son oxygène au sang.",
+   "standard": "Un arbre de bronches qui se divise 23 fois, jusqu'aux alvéoles où l'air rencontre le sang. Au repos tu respires environ 12 fois par minute, soit plus de 8 000 litres d'air par jour.",
+   "approfondi": "Les seize premières générations de bronches ne font que conduire l'air : c'est l'espace mort, environ 150 millilitres. Les échanges ont lieu au-delà. Chaque inspiration calme déplace un demi-litre, soit 6 litres par minute, pour une capacité totale d'environ 6 litres. Le poumon droit a trois lobes, le gauche deux.",
+   "note": "Fausses couleurs, comme en astronomie : elles distinguent les structures, pas leur teinte réelle."
+  },
+  "108": {
+   "simple": "L'usine chimique de ton corps. Il nettoie le sang, garde des réserves de sucre et sait se réparer.",
+   "standard": "L'usine chimique du corps, 1,5 kilogramme. Il stocke le sucre, fabrique la bile, épure le sang et accomplit plus de 500 fonctions. Il peut se régénérer même amputé des deux tiers.",
+   "approfondi": "Il reçoit environ 1,5 litre de sang par minute, un quart du débit cardiaque : les trois quarts par la veine porte, chargée des nutriments de l'intestin, le reste par l'artère hépatique. Il produit 0,5 à 1 litre de bile par jour. Après ablation partielle, les hépatocytes restants se divisent et la masse se reconstitue en quelques semaines à quelques mois.",
+   "note": "Fausses couleurs, comme en astronomie : elles distinguent les structures, pas leur teinte réelle."
+  },
+  "109": {
+   "simple": "Une poche musclée qui malaxe ton repas dans un liquide très acide. Une couche de mucus protège sa paroi.",
+   "standard": "Une poche musclée qui brasse le repas dans un acide très fort (pH 1 à 2), capable de ronger certains métaux comme l'acier fin, mais pas tous. Sa paroi se protège par une couche de mucus renouvelée en continu.",
+   "approfondi": "Presque vide, il contient quelques dizaines de millilitres ; après un repas, 1 à 1,5 litre. Son acide dénature les protéines et active la pepsine. Le mucus, chargé de bicarbonate, maintient un pH proche de 7 contre la paroi. Le repas le quitte en 2 à 4 heures.",
+   "note": "Fausses couleurs, comme en astronomie : elles distinguent les structures, pas leur teinte réelle."
+  },
+  "110": {
+   "simple": "Deux filtres en forme de haricot. Ils nettoient ton sang et fabriquent l'urine.",
+   "standard": "Deux filtres en forme de haricot. Chaque jour, ils tirent du sang environ 180 litres de liquide, soit tout ton plasma filtré une soixantaine de fois, et n'en rejettent qu'un litre et demi sous forme d'urine.",
+   "approfondi": "Ils reçoivent environ 1 litre de sang par minute, un cinquième du débit cardiaque. Les glomérules filtrent 125 millilitres de plasma par minute, soit 180 litres par jour, réabsorbés à plus de 99 pour cent. Les reins règlent aussi la pression artérielle et le pH, et sécrètent l'érythropoïétine.",
+   "note": "Fausses couleurs, comme en astronomie : elles distinguent les structures, pas leur teinte réelle."
+  },
+  "111": {
+   "simple": "Un très long tube replié dans ton ventre. Il fait passer les aliments digérés dans le sang.",
+   "standard": "Six à sept mètres de tube repliés dans le ventre. L'intestin grêle absorbe les nutriments sur une surface d'environ 30 mètres carrés ; le côlon, autour, récupère l'eau et abrite le microbiote.",
+   "approfondi": "L'intestin grêle offre environ 30 mètres carrés et le côlon 2, loin des 300 longtemps cités. Chaque jour, environ 9 litres de liquide y entrent, boissons et sécrétions digestives réunies : le grêle en réabsorbe la plus grande part, le côlon presque tout le reste. Il ne sort qu'un à deux décilitres d'eau dans les selles.",
+   "note": "Fausses couleurs, comme en astronomie : elles distinguent les structures, pas leur teinte réelle."
+  },
+  "112": {
+   "simple": "Un appareil photo vivant. Il fait la mise au point et envoie les images au cerveau.",
+   "standard": "Une chambre noire de 24 millimètres. La cornée et le cristallin font la mise au point, l'iris règle la lumière, et la rétine, au fond, transforme l'image en signaux nerveux.",
+   "approfondi": "Sa puissance optique est d'environ 60 dioptries, dont les deux tiers viennent de la cornée ; le cristallin, déformable, ajuste la mise au point. La pupille varie de 2 à 8 millimètres. L'image se forme renversée sur la rétine, et le nerf optique emporte le signal par un million de fibres environ.",
+   "note": "Fausses couleurs, comme en astronomie : elles distinguent les structures, pas leur teinte réelle."
+  },
+  "113": {
+   "simple": "Ton corps est fait de milliers de milliards de cellules. Approche-toi d'un point pour voir ce qu'il cache.",
+   "standard": "Environ 30 000 milliards de cellules, et 7 milliards de milliards de milliards d'atomes. Leur hydrogène date du Big Bang ; presque tout le reste, 90 pour cent de ta masse, est né dans des étoiles. Approche-toi d'un point, il s'ouvre : choisis un endroit et zoome.",
+   "approfondi": "Oxygène, carbone, hydrogène et azote font 96 pour cent de ta masse. Les estimations vont de 28 000 à 37 000 milliards de cellules selon la corpulence, dont 84 pour cent de globules rouges. L'hydrogène, 62 pour cent de tes atomes, date du Big Bang ; les éléments plus lourds ont été forgés dans des étoiles.",
+   "note": "Fausses couleurs, comme en astronomie. Bien moins de points que de cellules réelles."
+  }
+ },
+ "visite": [
+  {
+   "cible": "Corps humain",
+   "titre": "2 heures du matin, il dort",
+   "texte": "Le corps est allongé, immobile. Le cœur a ralenti vers 50 battements par minute, la respiration est lente et régulière, la température a baissé d'un demi-degré. De l'extérieur, il ne se passe rien.",
+   "effets": [
+    [
+     "Cœur",
+     "pulse",
+     0.85
+    ],
+    [
+     "Poumon",
+     "pulse",
+     0.22
+    ]
+   ],
+   "couche": true
+  },
+  {
+   "cible": "Cerveau",
+   "titre": "Le cerveau ne s'éteint pas",
+   "texte": "Il reste très actif : sa consommation d'énergie ne baisse que de 10 à 40 pour cent en sommeil profond, et remonte au niveau de l'éveil pendant les rêves. La nuit enchaîne quatre à six cycles d'environ 90 minutes. Chaque cycle traverse le sommeil léger, le sommeil profond, puis le sommeil paradoxal.",
+   "effets": [
+    [
+     "Cerveau",
+     "pulse",
+     0.3
+    ]
+   ],
+   "couche": false
+  },
+  {
+   "cible": "Cerveau",
+   "titre": "Sommeil profond : les ondes lentes",
+   "texte": "De grandes vagues d'activité balaient le cortex, de l'avant vers l'arrière, environ une par seconde. Des millions de neurones se taisent ensemble, puis se rallument ensemble. Ce sont les ondes delta que mesure un électroencéphalogramme.",
+   "effets": [
+    [
+     "Cerveau",
+     "wave",
+     0.8,
+     [
+      0,
+      0,
+      1
+     ],
+     3.2
+    ]
+   ],
+   "couche": false
+  },
+  {
+   "cible": "Cortex cérébral",
+   "titre": "Dans le cortex : silence, puis tous ensemble",
+   "texte": "Vu de près, chaque neurone alterne une phase muette et une phase de décharge, en rythme avec ses voisins. Les fils cyan et magenta sont leurs liaisons : c'est par elles que la vague se propage.",
+   "effets": [
+    [
+     "Cortex cérébral",
+     "pulse",
+     0.8
+    ]
+   ],
+   "couche": false
+  },
+  {
+   "cible": "Synapse",
+   "titre": "La mémoire se range",
+   "texte": "Pendant ces vagues, le cerveau rejoue en accéléré une partie de ce qu'il a vécu dans la journée ; on l'a surtout observé chez le rat. Certaines synapses seraient renforcées, beaucoup d'autres allégées. C'est sans doute pour cela qu'on retient mieux après une nuit de sommeil.",
+   "effets": [
+    [
+     "Synapse",
+     "noise",
+     5
+    ]
+   ],
+   "couche": false
+  },
+  {
+   "cible": "Cerveau",
+   "titre": "Le grand nettoyage ?",
+   "texte": "Une hypothèse célèbre : pendant le sommeil profond, le liquide cérébrospinal circulerait mieux entre les cellules et emporterait les déchets de la journée. Des expériences sur la souris l'ont montré en 2013, d'autres ont trouvé l'inverse en 2024. Les chercheurs en débattent encore.",
+   "effets": [
+    [
+     "Cerveau",
+     "wave",
+     -0.25,
+     [
+      0,
+      1,
+      0
+     ],
+     4.5
+    ]
+   ],
+   "couche": false
+  },
+  {
+   "cible": "Cerveau",
+   "titre": "Sommeil paradoxal : les rêves",
+   "texte": "Changement complet : l'activité devient rapide et désordonnée, presque comme à l'éveil. C'est le moment des rêves les plus vifs. Les yeux bougent sous les paupières, tandis que les muscles du corps sont paralysés pour qu'on ne mime pas ses rêves.",
+   "effets": [
+    [
+     "Cerveau",
+     "noise",
+     11
+    ],
+    [
+     "Œil",
+     "noise",
+     7
+    ]
+   ],
+   "couche": false
+  },
+  {
+   "cible": "Corps humain",
+   "titre": "Et le cycle recommence",
+   "texte": "Sommeil léger, profond, paradoxal : le cerveau refait ce parcours jusqu'au matin, avec de plus en plus de rêves en fin de nuit. Au réveil, les souvenirs sont mieux rangés, et le cerveau peut-être nettoyé. Tu peux maintenant explorer librement.",
+   "effets": [
+    [
+     "Cœur",
+     "pulse",
+     0.85
+    ],
+    [
+     "Poumon",
+     "pulse",
+     0.22
+    ]
+   ],
+   "couche": true
+  }
+ ]
+}

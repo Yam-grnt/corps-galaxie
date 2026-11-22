@@ -1,0 +1,19 @@
+plugins { id 'com.android.library' version '8.2.0' }
+
+// Avant de compiler : node plugin-voix/preparer.js  (met en place le moteur sherpa-onnx et le modèle français).
+android {
+    namespace 'io.github.yamgrnt.galaxievoix'
+    compileSdk 34
+    defaultConfig { minSdk 24 }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+    // les modèles sont déjà compacts : inutile de les recompresser, ils se chargent plus vite tels quels
+    androidResources { noCompress 'onnx' }
+}
+
+dependencies {
+    // fournis par l'application au moment de l'export (Godot et la bibliothèque Kotlin en font partie)
+    compileOnly 'org.godotengine:godot:4.4.1.stable'
+    compileOnly 'org.jetbrains.kotlin:kotlin-stdlib:1.9.20'
+    // classes de sherpa-onnx, embarquées dans l'AAR (libs/) avec la bibliothèque native (src/main/jniLibs)
+    implementation files('libs/sherpa-onnx-classes-2.0.3.jar')
+}

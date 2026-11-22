@@ -1,0 +1,302 @@
+[
+ [
+  "montre-moi un neurone",
+  "aller",
+  "Neurone"
+ ],
+ [
+  "je veux voir les mitochondries",
+  "aller",
+  "Mitochondrie"
+ ],
+ [
+  "emmène-moi au cœur",
+  "aller",
+  "Cœur"
+ ],
+ [
+  "montre-moi l'axone",
+  "aller",
+  "Axone myélinisé"
+ ],
+ [
+  "montre l'appareil de Golgi",
+  "aller",
+  "Appareil de Golgi"
+ ],
+ [
+  "je veux voir le réticulum endoplasmique",
+  "aller",
+  "Réticulum endoplasmique"
+ ],
+ [
+  "montre-moi un ribosome",
+  "aller",
+  "Ribosome"
+ ],
+ [
+  "va voir le néphron",
+  "aller",
+  "Néphron"
+ ],
+ [
+  "montre-moi un lysosome",
+  "aller",
+  "Lysosome"
+ ],
+ [
+  "je veux voir le nucléole",
+  "aller",
+  "Nucléole"
+ ],
+ [
+  "montre-moi l'adénine",
+  "aller",
+  "Adénine (A)"
+ ],
+ [
+  "montre la guanine",
+  "aller",
+  "Guanine (G)"
+ ],
+ [
+  "va voir la cytosine",
+  "aller",
+  "Cytosine (C)"
+ ],
+ [
+  "montre-moi la thymine",
+  "aller",
+  "Thymine (T)"
+ ],
+ [
+  "je veux voir l'uracile",
+  "aller",
+  "Uracile (U)"
+ ],
+ [
+  "montre-moi une histone",
+  "aller",
+  "Histone"
+ ],
+ [
+  "montre l'actine et la myosine",
+  "aller",
+  "Myosine"
+ ],
+ [
+  "je veux voir la rhodopsine",
+  "aller",
+  "Rhodopsine"
+ ],
+ [
+  "montre-moi la tubuline",
+  "aller",
+  "Tubuline"
+ ],
+ [
+  "va voir la fibre de chromatine",
+  "aller",
+  "Fibre de chromatine"
+ ],
+ [
+  "montre-moi un astrocyte",
+  "aller",
+  "Astrocyte"
+ ],
+ [
+  "je veux voir un lymphocyte",
+  "aller",
+  "Lymphocyte"
+ ],
+ [
+  "montre-moi un hépatocyte",
+  "aller",
+  "Hépatocyte"
+ ],
+ [
+  "montre un pneumocyte",
+  "aller",
+  "Pneumocyte"
+ ],
+ [
+  "va voir un entérocyte",
+  "aller",
+  "Entérocyte"
+ ],
+ [
+  "montre-moi l'ostéon",
+  "aller",
+  "Ostéon"
+ ],
+ [
+  "je veux voir la villosité intestinale",
+  "aller",
+  "Villosité intestinale"
+ ],
+ [
+  "montre le lobule hépatique",
+  "aller",
+  "Lobule hépatique"
+ ],
+ [
+  "montre-moi l'hydroxyapatite",
+  "aller",
+  "Hydroxyapatite"
+ ],
+ [
+  "montre-moi l'ADN",
+  "aller",
+  "ADN"
+ ],
+ [
+  "c'est quoi",
+  "decrire",
+  ""
+ ],
+ [
+  "plus simple",
+  "niveau",
+  ""
+ ],
+ [
+  "lance la visite",
+  "visite",
+  ""
+ ],
+ [
+  "reviens au corps",
+  "retour",
+  ""
+ ],
+ [
+  "montre-moi un globule rouge",
+  "aller",
+  "Globule rouge"
+ ],
+ [
+  "je veux voir l'hémoglobine",
+  "aller",
+  "Hémoglobine"
+ ],
+ [
+  "montre les étiquettes",
+  "etiquettes",
+  "oui"
+ ],
+ [
+  "étape suivante",
+  "suivant",
+  ""
+ ],
+ [
+  "montre-moi le pancréas",
+  "aller",
+  "Pancréas"
+ ],
+ [
+  "va voir la moelle épinière",
+  "aller",
+  "Moelle épinière"
+ ],
+ [
+  "montre-moi la thyroïde",
+  "aller",
+  "Thyroïde"
+ ],
+ [
+  "je veux voir un spermatozoïde",
+  "aller",
+  "Spermatozoïde"
+ ],
+ [
+  "montre l'îlot de Langerhans",
+  "aller",
+  "Îlot de Langerhans"
+ ],
+ [
+  "recentre",
+  "recentrer",
+  ""
+ ],
+ [
+  "montre le squelette",
+  "filtre",
+  "squelette"
+ ],
+ [
+  "lance la visite de la digestion",
+  "visite",
+  "digestion"
+ ],
+ [
+  "montre-moi le nucléosome",
+  "aller",
+  "Nucléosome"
+ ],
+ [
+  "je veux voir un kératinocyte",
+  "aller",
+  "Kératinocyte"
+ ],
+ [
+  "montre-moi la synapse",
+  "aller",
+  "Synapse"
+ ],
+ [
+  "montre-moi l'ATP synthase",
+  "aller",
+  "ATP synthase"
+ ],
+ [
+  "bonjour",
+  "libre|rien",
+  ""
+ ],
+ [
+  "attends une seconde",
+  "libre|rien",
+  ""
+ ],
+ [
+  "euh je ne sais pas",
+  "libre|rien",
+  ""
+ ],
+ [
+  "merci beaucoup",
+  "libre|rien",
+  ""
+ ],
+ [
+  "qu'est-ce qu'on mange ce soir",
+  "libre|rien",
+  ""
+ ],
+ [
+  "c'est vraiment très joli",
+  "libre|rien",
+  ""
+ ],
+ [
+  "tu as vu le match hier soir",
+  "libre|rien",
+  ""
+ ],
+ [
+  "passe-moi la manette s'il te plaît",
+  "libre|rien",
+  ""
+ ],
+ [
+  "il fait chaud ici",
+  "libre|rien",
+  ""
+ ],
+ [
+  "je reviens dans deux minutes",
+  "libre|rien",
+  ""
+ ]
+]
